@@ -10,7 +10,7 @@ import {
 } from "mdbreact";
 import { BrowserRouter as Router } from "react-router-dom";
 
-export default class Heading extends React.Component {
+export default class Heading extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -28,7 +28,7 @@ export default class Heading extends React.Component {
   render() {
     return (
       <Router>
-        <Navbar color="indigo" dark expand="md" scrolling>
+        <Navbar color="blue" dark expand="md" scrolling>
           <NavbarBrand href="/Home">
             <strong>React Pay</strong>
           </NavbarBrand>
