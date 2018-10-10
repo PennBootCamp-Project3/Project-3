@@ -1,61 +1,64 @@
-import React from "react";
+import React, { Component } from "react";
 import {
-  Collapse,
   Navbar,
-  NavbarToggler,
   NavbarBrand,
-  Nav,
+  NavbarNav,
+  NavbarToggler,
+  Collapse,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem } from 'reactstrap';
+} from "mdbreact";
+import { BrowserRouter as Router } from "react-router-dom";
 
 export default class Heading extends React.Component {
   constructor(props) {
     super(props);
-
-    this.toggle = this.toggle.bind(this);
     this.state = {
-      isOpen: false
+      collapse: false,
+      isWideEnough: false
     };
+    this.onClick = this.onClick.bind(this);
   }
-  toggle() {
+
+  onClick() {
     this.setState({
-      isOpen: !this.state.isOpen
+      collapse: !this.state.collapse
     });
   }
   render() {
     return (
-      <div>
-        <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">React Pay</NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="mr-auto" navbar>
+      <Router>
+        <Navbar color="indigo" dark expand="md" scrolling>
+          <NavbarBrand href="/Home">
+            <strong>React Pay</strong>
+          </NavbarBrand>
+          {!this.state.isWideEnough && <NavbarToggler onClick={this.onClick} />}
+          <Collapse isOpen={this.state.collapse} navbar>
+            <NavbarNav left>
               <NavItem>
-                <NavLink href="/pay">Pay</NavLink>
+                <NavLink to="/Pay">Pay</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/bill">Bill</NavLink>
+                <NavLink to="/Bill">Bill</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/report">Report</NavLink>
+                <NavLink to="/Report">Report</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/bolt">Bolt</NavLink>
+                <NavLink to="/Bolt">Bolt</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/config">Config</NavLink>
+                <NavLink to="/Config">Config</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/logout">Logout</NavLink>
+                <NavLink to="/Logout">Logout</NavLink>
               </NavItem>
-            </Nav>
+            </NavbarNav>
+            <NavbarNav right>
+            </NavbarNav>
           </Collapse>
         </Navbar>
-      </div>
+      </Router>
     );
   }
 }
