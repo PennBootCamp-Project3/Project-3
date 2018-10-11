@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Nav.css";
 import {
   Navbar,
   NavbarBrand,
