@@ -6,7 +6,8 @@ import {
   FormGroup,
   Label,
   Input,
-  CustomInput
+  CustomInput, 
+  Button
 } from "reactstrap";
 
 export default class BillForm extends Component {
@@ -76,6 +77,7 @@ export default class BillForm extends Component {
               />
             </FormGroup>
           </Col>
+          <Button color="blue">Submit</Button>
         </Row>
         <br />
         <strong>Current Bill Plans</strong>
