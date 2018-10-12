@@ -8,7 +8,7 @@ class Bill extends Component {
       <React.Fragment>
         <Heading />
         <br />
-        <div class="container-fluid">
+        <div class="container">
           <BillForm />
         </div>
       </React.Fragment>

@@ -8,7 +8,7 @@ class Report extends Component {
       <React.Fragment>
         <Heading />
         <br />
-        <div class="container-fluid">
+        <div class="container">
           <ReportForm />
         </div>
       </React.Fragment>

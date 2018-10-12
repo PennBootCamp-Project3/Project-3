@@ -1,65 +1,58 @@
 import React, { Component } from "react";
-import "./Nav.css";
 import {
-  Navbar,
-  NavbarBrand,
-  NavbarNav,
-  NavbarToggler,
-  Collapse,
-  NavItem,
-  NavLink,
-} from "mdbreact";
-import { BrowserRouter as Router } from "react-router-dom";
-
-export default class Heading extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      collapse: false,
-      isWideEnough: false
-    };
-    this.onClick = this.onClick.bind(this);
+    Collapse,
+    Navbar,
+    NavbarToggler,
+    NavbarBrand,
+    Nav,
+    NavItem,
+    NavLink
+ } from 'reactstrap';
+  
+  export default class Example extends Component {
+    constructor(props) {
+      super(props);
+  
+      this.toggle = this.toggle.bind(this);
+      this.state = {
+        isOpen: false
+      };
+    }
+    toggle() {
+      this.setState({
+        isOpen: !this.state.isOpen
+      });
+    }
+    render() {
+      return (
+        <div>
+          <Navbar color="info" light expand="md">
+            <NavbarBrand href="/home">React Pay</NavbarBrand>
+            <NavbarToggler onClick={this.toggle} />
+            <Collapse isOpen={this.state.isOpen} navbar>
+              <Nav className="ml-auto" navbar>
+                <NavItem>
+                  <NavLink href="/pay/">Pay</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="/bill/">Bill</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="/report/">Report</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="/bolt/">Bolt</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="/config/">Config</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="/logout/">Logout</NavLink>
+                </NavItem>
+              </Nav>
+            </Collapse>
+          </Navbar>
+        </div>
+      );
+    }
   }
-
-  onClick() {
-    this.setState({
-      collapse: !this.state.collapse
-    });
-  }
-  render() {
-    return (
-      <Router>
-        <Navbar color="blue" dark expand="md" scrolling>
-          <NavbarBrand href="/Home">
-            <strong>React Pay</strong>
-          </NavbarBrand>
-          {!this.state.isWideEnough && <NavbarToggler onClick={this.onClick} />}
-          <Collapse isOpen={this.state.collapse} navbar>
-            <NavbarNav left>
-              <NavItem>
-                <NavLink to="/Pay">Pay</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink to="/Bill">Bill</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink to="/Report">Report</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink to="/Bolt">Bolt</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink to="/Config">Config</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink to="/Logout">Logout</NavLink>
-              </NavItem>
-            </NavbarNav>
-            <NavbarNav right>
-            </NavbarNav>
-          </Collapse>
-        </Navbar>
-      </Router>
-    );
-  }
-}

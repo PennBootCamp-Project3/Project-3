@@ -8,7 +8,7 @@ class Config extends Component {
       <React.Fragment>
         <Heading />
         <br />
-        <div class="container-fluid">
+        <div class="container">
           <ConfigForm />
         </div>
       </React.Fragment>

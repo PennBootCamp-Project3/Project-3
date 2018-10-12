@@ -8,7 +8,7 @@ class Pay extends Component {
       <React.Fragment>
         <Heading />
         <br />
-        <div class="container-fluid">
+        <div class="container">
           <PayForm />
         </div>
       </React.Fragment>
