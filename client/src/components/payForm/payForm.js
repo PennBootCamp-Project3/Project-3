@@ -5,6 +5,8 @@ export default class PayForm extends Component {
   render() {
     return (
       <div>
+        <br />
+        <br />
         <strong>Shipping Information</strong>
         <hr />
         <Form>

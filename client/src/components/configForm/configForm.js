@@ -12,6 +12,8 @@ import {
     render() {
       return (
         <div>
+          <br />
+          <br />
           <strong>Configuration</strong>
           <hr />
           <Row form>

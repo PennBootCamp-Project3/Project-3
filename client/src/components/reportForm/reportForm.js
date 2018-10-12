@@ -5,6 +5,8 @@ export default class Example extends Component {
   render() {
     return (
       <div>
+        <br />
+        <br />
         <strong>Transactions</strong>
         <hr />
         <Table bordered>

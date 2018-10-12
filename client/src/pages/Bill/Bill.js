@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Heading from "../../components/Nav/Nav";
 import BillForm from "../../components/billForm";
+import FooterPage from "../../components/footer";
 
 class Bill extends Component {
   render() {
@@ -10,6 +11,9 @@ class Bill extends Component {
         <br />
         <div class="container">
           <BillForm />
+        </div>
+        <div>
+        <FooterPage />
         </div>
       </React.Fragment>
     );

@@ -14,6 +14,8 @@ export default class BillForm extends Component {
   render() {
     return (
       <div>
+        <br />
+        <br />
         <strong>Bill Pay Information</strong>
         <hr />
         <Row form>

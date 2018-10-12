@@ -26,7 +26,7 @@ import {
     render() {
       return (
         <div>
-          <Navbar color="info" light expand="md">
+          <Navbar color="info" fixed="top" light expand="sm">
             <NavbarBrand href="/home">React Pay</NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
