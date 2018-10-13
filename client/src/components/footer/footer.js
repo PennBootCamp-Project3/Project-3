@@ -4,7 +4,7 @@ import { Container, Footer } from "mdbreact";
 export default class FooterPage extends Component {
 render() {
 return (
-<Footer color="blue">
+<Footer color="indigo">
   <div className="footer-copyright text-center py-3">
     <Container>
       &copy; {new Date().getFullYear()} Copyright:{" "}

@@ -7,6 +7,7 @@ export default class PayForm extends Component {
       <div>
         <br />
         <br />
+        
         <strong>Shipping Information</strong>
         <hr />
         <Form>
@@ -204,7 +205,7 @@ export default class PayForm extends Component {
               </FormGroup>
             </Col>
           </Row>
-          <Button color="blue">Submit Order</Button>
+          <Button color="indigo">Submit Order</Button>
         </Form>
       </div>
     );

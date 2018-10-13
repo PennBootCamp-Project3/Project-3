@@ -79,7 +79,7 @@ export default class BillForm extends Component {
               />
             </FormGroup>
           </Col>
-          <Button color="blue">Submit</Button>
+          <Button color="indigo">Submit</Button>
         </Row>
         <br />
         <strong>Current Bill Plans</strong>

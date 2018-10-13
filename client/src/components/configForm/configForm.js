@@ -51,7 +51,7 @@ import {
               </FormGroup>
             </Col>
             <Button color="grey">Cancel</Button>
-            <Button color="blue">Save</Button>
+            <Button color="indigo">Save</Button>
           </Row>
         </div>
       );
