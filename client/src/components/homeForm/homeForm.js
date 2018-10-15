@@ -20,7 +20,7 @@ export default class HomeForm extends Component {
                 Welcome to ReactPay!
               </h2>
               <p class="mb-4 pb-2 px-md-5 mx-md-5">
-                ReactPay is an intergration tool used by merchants 
+                ReactPay is an integration tool used by merchants 
                 to seamlessly streamline their payment processing 
                 systems.
               </p>
