@@ -24,9 +24,6 @@ export default class HomeForm extends Component {
                 to seamlessly streamline their payment processing 
                 systems.
               </p>
-              <a class="btn peach-gradient">
-                <i class="fa fa-clone left" /> View project
-              </a>
             </div>
           </div>
         </div>
@@ -41,7 +38,7 @@ export default class HomeForm extends Component {
                   With supporting text below as a natural lead-in to additional
                   content.
                 </CardText>
-                <Button color="indigo">Go to Pay Form</Button>
+                <Button href ="/pay/" color="indigo">Go to Pay Form</Button>
               </Card>
             </Col>
             <Col md={6}>
@@ -51,7 +48,7 @@ export default class HomeForm extends Component {
                   With supporting text below as a natural lead-in to additional
                   content.
                 </CardText>
-                <Button color="indigo">Go to Bill Form</Button>
+                <Button href="/bill/" color="indigo">Go to Bill Form</Button>
               </Card>
             </Col>
           </Row>
@@ -64,7 +61,7 @@ export default class HomeForm extends Component {
                   With supporting text below as a natural lead-in to additional
                   content.
                 </CardText>
-                <Button color="indigo">Go to Report Form</Button>
+                <Button href="/report/" color="indigo">Go to Report Form</Button>
               </Card>
             </Col>
             <Col md={6}>
@@ -74,7 +71,7 @@ export default class HomeForm extends Component {
                   With supporting text below as a natural lead-in to additional
                   content.
                 </CardText>
-                <Button color="indigo">Go to Bolt Form</Button>
+                <Button href="/bolt/" color="indigo">Go to Bolt Form</Button>
               </Card>
             </Col>
           </Row>
@@ -87,7 +84,7 @@ export default class HomeForm extends Component {
                   With supporting text below as a natural lead-in to additional
                   content.
                 </CardText>
-                <Button color="indigo">Go to Config Form</Button>
+                <Button href="/config/" color="indigo">Go to Config Form</Button>
               </Card>
             </Col>
             <Col md={6}>
@@ -97,7 +94,7 @@ export default class HomeForm extends Component {
                   With supporting text below as a natural lead-in to additional
                   content.
                 </CardText>
-                <Button color="indigo">Logout</Button>
+                <Button href="/" color="indigo">Logout</Button>
               </Card>
             </Col>
           </Row>
