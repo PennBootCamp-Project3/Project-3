@@ -7,8 +7,7 @@ export default class PayForm extends Component {
       <div>
         <br />
         <br />
-        
-        <strong>Shipping Information</strong>
+        <h5><strong>Shipping Information</strong></h5>
         <hr />
         <Form>
           <Row form>
@@ -112,7 +111,7 @@ export default class PayForm extends Component {
           </Row>
         </Form>
         <br/>
-        <strong>Billing Information</strong>
+        <h5><strong>Billing Information</strong></h5>
         <hr />
         <Form>
           <Row form>
@@ -184,7 +183,7 @@ export default class PayForm extends Component {
           </Row>
         </Form>
         <br/>
-        <strong>Profile</strong>
+        <h5><strong>Profile</strong></h5>
         <hr />
         <Form>
           <Row form>

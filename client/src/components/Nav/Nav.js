@@ -6,13 +6,8 @@ import {
   NavbarToggler,
   Collapse,
   NavItem,
-  NavLink,
-  Dropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
+  NavLink
 } from "mdbreact";
-import { BrowserRouter as Router } from "react-router-dom";
 
 export default class Heading extends Component {
   constructor(props) {
@@ -32,9 +27,9 @@ export default class Heading extends Component {
   render() {
     return (
       <div>
-        <Navbar color="indigo" fixed="top" dark expand="md" scrolling>
+        <Navbar color="indigo" fixed="top" dark expand="md">
           <NavbarBrand href="/home">
-            <strong>React Pay</strong>
+            <strong>ReactPay</strong>
           </NavbarBrand>
           {!this.state.isWideEnough && <NavbarToggler onClick={this.onClick} />}
           <Collapse isOpen={this.state.collapse} navbar>
@@ -55,7 +50,7 @@ export default class Heading extends Component {
                 <NavLink to="/config/">Config</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink to="/logout/">Logout</NavLink>
+                <NavLink to="/">Logout</NavLink>
               </NavItem>
             </NavbarNav>
           </Collapse>

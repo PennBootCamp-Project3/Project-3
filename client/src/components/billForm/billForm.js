@@ -16,7 +16,7 @@ export default class BillForm extends Component {
       <div>
         <br />
         <br />
-        <strong>Bill Pay Information</strong>
+        <h5><strong>Bill Pay Information</strong></h5>
         <hr />
         <Row form>
           <Col md={12}>
@@ -82,7 +82,7 @@ export default class BillForm extends Component {
           <Button color="indigo">Submit</Button>
         </Row>
         <br />
-        <strong>Current Bill Plans</strong>
+        <h5><strong>Current Bill Plans</strong></h5>
         <hr />
         <Table bordered>
           <thead>

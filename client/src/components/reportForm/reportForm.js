@@ -7,7 +7,7 @@ export default class Example extends Component {
       <div>
         <br />
         <br />
-        <strong>Transactions</strong>
+        <h5><strong>Transactions</strong></h5>
         <hr />
         <Table bordered>
           <thead>

@@ -5,10 +5,10 @@ export default class FooterPage extends Component {
 render() {
 return (
 <Footer color="indigo">
-  <div className="footer-copyright text-center py-3">
+  <div className="text-center py-3">
     <Container>
       &copy; {new Date().getFullYear()} Copyright:{" "}
-      <a href="https://www.MDBootstrap.com"> MDBootstrap.com </a>
+      <a>ReactPay</a>
     </Container>
   </div>
 </Footer>

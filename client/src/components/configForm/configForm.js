@@ -14,7 +14,7 @@ import {
         <div>
           <br />
           <br />
-          <strong>Configuration</strong>
+          <h5><strong>Configuration</strong></h5>
           <hr />
           <Row form>
             <Col md={4}>
