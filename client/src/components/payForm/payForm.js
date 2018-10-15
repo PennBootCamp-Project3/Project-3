@@ -1,7 +1,20 @@
 import React, { Component } from "react";
 import { Col, Row, Button, Form, FormGroup, Label, Input, CustomInput } from "reactstrap";
+import API from '../../utils/API';
 
 export default class PayForm extends Component {
+  state = {
+    retref: '',
+    amount: ''
+  };
+  
+  handleFormSubmit = event => {
+    event.preventDefault();
+    API.runAuth({
+      year: this.state.year
+    })
+  };
+  
   render() {
     return (
       <div>
@@ -204,7 +217,7 @@ export default class PayForm extends Component {
               </FormGroup>
             </Col>
           </Row>
-          <Button color="indigo">Submit Order</Button>
+          <Button onClick={this.handleFormSubmit} color="indigo">Submit Order</Button>
         </Form>
       </div>
     );

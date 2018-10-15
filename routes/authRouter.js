@@ -1,24 +1,15 @@
-var express = require('express');
-var app = express();
-var authRouter = express.Router();
+const router = require('express').Router();
+const payController = require('../controllers/payController');
 
-var Auth = require('../models/auth');
+router
+    .route('/')
+    .get(payController.findById)
+    .post(payController.create);
 
-authRouter.route('/').get(function (req,res) {
-    console.log("in home route");
-});
+router 
+    .route('/:retref')
+    .get(payController.findById)
+    .put(payController.update)
+    .delete(payController.remove);
 
-authRouter.route('/auth/new').post(function (req, res) {
-    var myAuth = new Auth(req.body);
-    res.json("echo");
-    // item.save()
-    // .then(item => {
-    //     res.status(200).json({Item: 'Item added successfully'});
-    //     })
-    //     .catch(err => {
-    //     res.status(400).send("unable to save to database");
-    //     });
-    });
-
-
-module.exports = authRouter;
+module.exports = router;
