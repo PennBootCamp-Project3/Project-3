@@ -22,7 +22,7 @@ export default class PayForm extends Component {
         <br />
         <h5><strong>Shipping Information</strong></h5>
         <hr />
-        <Form>
+        <Form onSubmit={this.handleFormSubmit}>
           <Row form>
             <Col md={6}>
               <FormGroup>
@@ -217,7 +217,7 @@ export default class PayForm extends Component {
               </FormGroup>
             </Col>
           </Row>
-          <Button onClick={this.handleFormSubmit} color="indigo">Submit Order</Button>
+          <Button color="indigo">Submit Order</Button>
         </Form>
       </div>
     );
