@@ -1,20 +1,8 @@
 import React, { Component } from "react";
 import { Col, Row, Button, Form, FormGroup, Label, Input, CustomInput } from "reactstrap";
-import API from '../../utils/API';
+// import API from '../../utils/API';
 
 export default class PayForm extends Component {
-  state = {
-    retref: '',
-    amount: ''
-  };
-  
-  handleFormSubmit = event => {
-    event.preventDefault();
-    API.runAuth({
-      year: this.state.year
-    })
-  };
-  
   render() {
     return (
       <div>
@@ -22,24 +10,38 @@ export default class PayForm extends Component {
         <br />
         <h5><strong>Shipping Information</strong></h5>
         <hr />
-        <Form onSubmit={this.handleFormSubmit}>
+        <Form onSubmit={this.handleSubmit}>
           <Row form>
             <Col md={6}>
               <FormGroup>
                 <Label for="firstName">First Name</Label>
-                <Input type="name" name="first" id="firstName" placeholder="" />
+                <Input 
+                  type="name" 
+                  name="first" 
+                  id="firstName" 
+                  // value={this.state.firstName}
+                  // onChange={this.handleChange('name').bind(this)}
+                  placeholder="" />
               </FormGroup>
             </Col>
             <Col md={6}>
               <FormGroup>
                 <Label for="lastName">Last Name</Label>
-                <Input type="name" name="last" id="lastName" placeholder="" />
+                <Input 
+                  type="name" 
+                  name="last" 
+                  id="lastName" 
+                  // value={this.lastName}
+                  placeholder="" />
               </FormGroup>
             </Col>
           </Row>
           <FormGroup>
             <Label for="billingAddress">Billing Address</Label>
-            <Input type="text" name="address" id="billing" placeholder="" />
+            <Input 
+              type="text" 
+              name="address" id="billing" 
+              placeholder="" />
           </FormGroup>
           <FormGroup>
             <Label for="billingAddress2">Address 2</Label>
@@ -54,13 +56,19 @@ export default class PayForm extends Component {
             <Col md={6}>
               <FormGroup>
                 <Label for="city">City</Label>
-                <Input type="text" name="city" id="exampleCity" />
+                <Input 
+                  type="text" 
+                  name="city" 
+                  id="exampleCity" />
               </FormGroup>
             </Col>
             <Col md={4}>
               <FormGroup>
                 <Label for="state">State</Label>
-                <Input type="select" name="select" id="selectState">
+                <Input 
+                  type="select" 
+                  name="select" 
+                  id="selectState">
                   <option value="AL">Alabama</option>
                   <option value="AK">Alaska</option>
                   <option value="AZ">Arizona</option>
@@ -118,7 +126,10 @@ export default class PayForm extends Component {
             <Col md={2}>
               <FormGroup>
                 <Label for="zip">Zip</Label>
-                <Input type="text" name="zip" id="exampleZip" />
+                <Input 
+                  type="text" 
+                  name="zip" 
+                  id="exampleZip" />
               </FormGroup>
             </Col>
           </Row>
@@ -131,7 +142,10 @@ export default class PayForm extends Component {
             <Col md={6}>
               <FormGroup>
                 <Label for="cardType">Card Type</Label>
-                <Input type="select" name="card" id="cardType">
+                <Input 
+                  type="select" 
+                  name="card" 
+                  id="cardType">
                   <option value="Visa">Visa</option>
                   <option value="Mastercard">Mastercard</option>
                   <option values="American Express">American Express</option>
@@ -146,6 +160,7 @@ export default class PayForm extends Component {
                   type="text"
                   name="number"
                   id="cardNumber"
+                  // value={this.cardnum}
                   placeholder="0000-0000-0000-0000"
                 />
               </FormGroup>
@@ -166,7 +181,10 @@ export default class PayForm extends Component {
             <Col md={4}>
               <FormGroup>
                 <Label for="state">Expiration Month</Label>
-                <Input type="select" name="select" id="selectState">
+                <Input 
+                  type="select" 
+                  name="select" 
+                  id="selectState">
                   <option value="Jan">January</option>
                   <option value="Feb">February</option>
                   <option value="Mar">March</option>
@@ -189,6 +207,7 @@ export default class PayForm extends Component {
                   type="text"
                   name="zip"
                   id="exampleZip"
+                  // value={this.year}
                   placeholder="2018"
                 />
               </FormGroup>
@@ -203,7 +222,10 @@ export default class PayForm extends Component {
             <Col md={12}>
               <FormGroup>
                 <Label for="cardType">Send Receipt To:</Label>
-                <Input type="select" name="card" id="cardType">
+                <Input 
+                  type="select" 
+                  name="card" 
+                  id="cardType">
                   <option value="Saved">Saved Contacts</option>
                   <option value="Taub">Dean Taub</option>
                 </Input>
@@ -217,7 +239,11 @@ export default class PayForm extends Component {
               </FormGroup>
             </Col>
           </Row>
-          <Button color="indigo">Submit Order</Button>
+          <Button 
+            color="indigo"
+            // type="submit"
+            // value="Submit"
+            >Submit Order</Button>
         </Form>
       </div>
     );
