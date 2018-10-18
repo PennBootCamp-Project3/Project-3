@@ -1,2 +1,7 @@
-## React-Pay
-An integration tool for merchants.
+# react-pay
+
+To start server, run: npm start
+
+For auth, send PUT request to http://localhost:5000/api/auth
+
+Response body will contain response from CardConnect API.
