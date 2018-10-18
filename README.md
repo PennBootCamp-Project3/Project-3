@@ -1,4 +1,4 @@
-# cc-api
+# react-pay
 
 To start server, run: npm start
 
