@@ -3,7 +3,7 @@ const app = express();
 const mongoose = require('mongoose');
 const PORT = process.env.PORT || 5000;
 const cors = require('cors');
-const routes = require('./routes');
+const API = require('./routes/authRouter');
 
 // const db = require('/.models');
 
@@ -24,13 +24,13 @@ app.use(cors());
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 app.use(express.static('client/build'));
-app.use(routes);
+app.use(API);
 
 app.get('/', function(req, res) {
     res.send('home');
 });
 
-// app.use('/auth', authRouter)
+app.use('/api', API)
 
 app.listen(PORT, function(){
   console.log(`Server listening on port: ${PORT}.`);

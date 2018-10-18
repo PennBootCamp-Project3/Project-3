@@ -1,2 +1,1 @@
-## React-Pay
-An integration tool for merchants.
+# cc-api

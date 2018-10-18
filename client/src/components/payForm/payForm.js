@@ -169,11 +169,11 @@ export default class PayForm extends Component {
           <Row form>
             <Col md={4}>
               <FormGroup>
-                <Label for="city">CVC</Label>
+                <Label for="CVV">CVC</Label>
                 <Input
                   type="text"
-                  name="city"
-                  id="exampleCity"
+                  name="CVV"
+                  id="cvv"
                   placeholder="000"
                 />
               </FormGroup>
