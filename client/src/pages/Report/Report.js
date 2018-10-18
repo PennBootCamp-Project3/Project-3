@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Heading from "../../components/Nav/Nav";
 import ReportForm from "../../components/reportForm";
-import FooterPage from "../../components/footer";
+import FooterTwo from "../../components/footerTwo";
 
 class Report extends Component {
   render() {
@@ -13,7 +13,7 @@ class Report extends Component {
           <ReportForm />
         </div>
         <div>
-          <FooterPage />
+          <FooterTwo />
         </div>
       </React.Fragment>
     );

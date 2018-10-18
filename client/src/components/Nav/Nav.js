@@ -44,9 +44,6 @@ export default class Heading extends Component {
                 <NavLink to="/report/">Report</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink to="/bolt/">Bolt</NavLink>
-              </NavItem>
-              <NavItem>
                 <NavLink to="/config/">Config</NavLink>
               </NavItem>
               <NavItem>

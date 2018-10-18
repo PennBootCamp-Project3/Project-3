@@ -6,7 +6,6 @@ import Home from "./pages/Home";
 import Pay from "./pages/Pay";
 import Bill from "./pages/Bill";
 import Report from "./pages/Report";
-import Bolt from "./pages/Bolt";
 import Config from "./pages/Config";
 import Logout from "./pages/Logout";
 import Landing from "./pages/Landing";
@@ -22,7 +21,6 @@ class App extends Component {
             <Route path="/Pay" component={Pay} />
             <Route path="/Bill" component={Bill} />
             <Route path="/Report" component={Report} />
-            <Route path="/Bolt" component={Bolt} />
             <Route path="/Config" component={Config} />
             <Route path="/Logout" component={Logout} />
           </switch>

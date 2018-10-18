@@ -6,7 +6,8 @@ import {
   CardText,
   CardImage,
   CardBody,
-  CardGroup
+  CardGroup,
+  Fa
 } from "mdbreact";
 import "./homeForm.css";
 
@@ -26,7 +27,10 @@ export default class HomeForm extends Component {
               ")"
           }}
         >
-          <div class="text-white text-center rgba-stylish-strong py-5 px-4" style={{ height: "500px" }}>
+          <div
+            class="text-white text-center rgba-stylish-strong py-5 px-4"
+            style={{ height: "500px" }}
+          >
             <div class="py-5">
               <h1 class="card-title h1 my-4 py-2">Welcome to ReactPay!</h1>
               <p class="mb-4 pb-1 px-md-2 mx-md-5">
@@ -34,11 +38,17 @@ export default class HomeForm extends Component {
                 streamline their payment processing systems.
               </p>
             </div>
+            <Button
+              href="https://github.com/PennBootCamp-Project3/react-pay"
+              color="indigo"
+            >
+              <Fa icon="clone left" /> View the Code
+            </Button>
           </div>
         </div>
 
         <div>
-        <br />
+          <br />
           <CardGroup deck>
             <Card>
               <CardImage
@@ -54,7 +64,9 @@ export default class HomeForm extends Component {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </CardText>
-                <Button href="/pay/" color="primary">Go</Button>
+                <Button href="/pay/" color="primary">
+                  Go
+                </Button>
               </CardBody>
             </Card>
 
@@ -72,7 +84,9 @@ export default class HomeForm extends Component {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </CardText>
-                <Button href="/bill/" color="primary">Go</Button>
+                <Button href="/bill/" color="primary">
+                  Go
+                </Button>
               </CardBody>
             </Card>
 
@@ -85,12 +99,14 @@ export default class HomeForm extends Component {
                 overlay="white-slight"
               />
               <CardBody>
-                <CardTitle tag="h5">Get Your Reports</CardTitle>
+                <CardTitle tag="h5">View Your Reports</CardTitle>
                 <CardText>
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </CardText>
-                <Button href="/report/" color="primary">Go</Button>
+                <Button href="/report/" color="primary">
+                  Go
+                </Button>
               </CardBody>
             </Card>
             <Card>
@@ -102,30 +118,14 @@ export default class HomeForm extends Component {
                 overlay="white-slight"
               />
               <CardBody>
-                <CardTitle tag="h5">A Nice to Have</CardTitle>
-                <CardText>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </CardText>
-                <Button href="/bolt/" color="primary">Go</Button>
-              </CardBody>
-            </Card>
-
-            <Card>
-              <CardImage
-                src="https://mdbootstrap.com/img/Photos/Others/images/48.jpg"
-                alt="Card image cap"
-                top
-                hover
-                overlay="white-slight"
-              />
-              <CardBody>
                 <CardTitle tag="h5">Set Your Configuration</CardTitle>
                 <CardText>
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </CardText>
-                <Button href="/config/" color="primary">Go</Button>
+                <Button href="/config/" color="primary">
+                  Go
+                </Button>
               </CardBody>
             </Card>
 
@@ -143,7 +143,9 @@ export default class HomeForm extends Component {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </CardText>
-                <Button href="/" color="primary">Logout</Button>
+                <Button href="/" color="primary">
+                  Logout
+                </Button>
               </CardBody>
             </Card>
           </CardGroup>

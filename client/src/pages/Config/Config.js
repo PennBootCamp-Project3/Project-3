@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 import Heading from "../../components/Nav/Nav";
 import ConfigForm from "../../components/configForm";
-import FooterPage from "../../components/footer";
+import FooterTwo from "../../components/footerTwo";
 
 class Config extends Component {
   render() {
@@ -13,7 +13,7 @@ class Config extends Component {
           <ConfigForm />
         </div>
         <div>
-          <FooterPage />
+          <FooterTwo />
         </div>
       </React.Fragment>
     );

@@ -16,7 +16,17 @@ class Pay extends Component {
       year: ''
     };
 
+      handleInputChange = event => {
+    const name = event.target.name;
+    const value = event.target.value;
+    this.setState({
+      [name]: value
+    });
+  };
+
   handleInputChange = event => {
+    const name = event.target.name;
+    const value = event.target.value;
     const { firstName, lastName, cardNum, year } = event.target;
     this.setState({
       [name]: value
