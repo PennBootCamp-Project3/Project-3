@@ -3,7 +3,7 @@ import Heading from "../../components/Nav/Nav";
 import PayForm from "../../components/payForm";
 import FooterPage from "../../components/footer";
 import API from "../../utils/API";
-import { ReactstrapInput } from "reactstrap-formik";
+// import { ReactstrapInput } from "reactstrap-formik";
 
 
 class Pay extends Component {
@@ -16,13 +16,13 @@ class Pay extends Component {
       year: ''
     };
 
-      handleInputChange = event => {
-    const name = event.target.name;
-    const value = event.target.value;
-    this.setState({
-      [name]: value
-    });
-  };
+  //   handleInputChange = event => {
+  //   const name = event.target.name;
+  //   const value = event.target.value;
+  //   this.setState({
+  //     [name]: value
+  //   });
+  // };
 
   handleInputChange = event => {
     const name = event.target.name;
@@ -35,17 +35,20 @@ class Pay extends Component {
   
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.cardNum && this.state.expiry) { //form validation
-      API.runAuth({               //calling runAuth endpoint which will send to server
-        firstName: this.state.firstName,
-        lastName: this.state.lastName,
-        cardNum: this.state.cardNum,
-        expiry: this.state.expiry,
-        amount: this.state.amount   // need to create a field for amount
+    console.log("inside handle form")
+    // if (this.state.cardNum && this.state.expiry) { //form validation
+         // need to create a field for amount
+      // })
+      API.testConnect()
+      .then(result => {
+          console.log("OK");
+          // return resp = result.data;
+          console.log(result);
       })
-        .then(res => this.recordAuth())
-        .catch(err => console.log(err));
-    }
+      .catch(error => {
+          console.log(error);
+          throw error;
+    })
   };
 
   render() {
@@ -54,7 +57,7 @@ class Pay extends Component {
         <Heading />
         <br />
         <div class="container">
-          <PayForm />
+          <PayForm onSubmit={this.handleFormSubmit}/>
         </div>
         <div>
           <FooterPage />

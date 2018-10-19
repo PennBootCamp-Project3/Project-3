@@ -4,13 +4,14 @@ import { Col, Row, Button, Form, FormGroup, Label, Input, CustomInput } from "re
 
 export default class PayForm extends Component {
   render() {
+    console.log(this.props);
     return (
       <div>
         <br />
         <br />
         <h5><strong>Shipping Information</strong></h5>
         <hr />
-        <Form onSubmit={this.handleSubmit}>
+        <Form >
           <Row form>
             <Col md={6}>
               <FormGroup>
@@ -240,8 +241,9 @@ export default class PayForm extends Component {
             </Col>
           </Row>
           <Button 
+          onClick={this.props.onSubmit}
             color="indigo"
-            // type="submit"
+            type="submit"
             // value="Submit"
             >Submit Order</Button>
         </Form>
