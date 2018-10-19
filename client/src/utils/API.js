@@ -6,6 +6,10 @@ export default  {
     testConnect: function(data) {
         return axios.get('/api/test', data);
 
+    },
+
+    runAuth: function(data) {
+        return axios.put('/api/auth', data);
     }
 }
 

@@ -24,10 +24,9 @@ class Pay extends Component {
   //   });
   // };
 
-  handleInputChange = event => {
+  handleChange = event => {
     const name = event.target.name;
     const value = event.target.value;
-    const { firstName, lastName, cardNum, year } = event.target;
     this.setState({
       [name]: value
     });
@@ -35,15 +34,14 @@ class Pay extends Component {
   
   handleFormSubmit = event => {
     event.preventDefault();
+    console.log(this.state);
     console.log("inside handle form")
     // if (this.state.cardNum && this.state.expiry) { //form validation
          // need to create a field for amount
       // })
-      API.testConnect()
+      API.runAuth(this.state)
       .then(result => {
-          console.log("OK");
-          // return resp = result.data;
-          console.log(result);
+          console.log(result.data);
       })
       .catch(error => {
           console.log(error);
@@ -57,7 +55,10 @@ class Pay extends Component {
         <Heading />
         <br />
         <div class="container">
-          <PayForm onSubmit={this.handleFormSubmit}/>
+          <PayForm 
+          formData={this.state}
+          onSubmit={this.handleFormSubmit} 
+          onChange={this.handleChange}/>
         </div>
         <div>
           <FooterPage />

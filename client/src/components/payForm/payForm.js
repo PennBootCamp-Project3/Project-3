@@ -18,10 +18,10 @@ export default class PayForm extends Component {
                 <Label for="firstName">First Name</Label>
                 <Input 
                   type="name" 
-                  name="first" 
+                  name="firstName" 
                   id="firstName" 
-                  // value={this.state.firstName}
-                  // onChange={this.handleChange('name').bind(this)}
+                  value={this.props.formData.firstName}
+                  onChange={this.props.onChange}
                   placeholder="" />
               </FormGroup>
             </Col>
@@ -32,7 +32,7 @@ export default class PayForm extends Component {
                   type="name" 
                   name="last" 
                   id="lastName" 
-                  // value={this.lastName}
+                  value={this.lastName}
                   placeholder="" />
               </FormGroup>
             </Col>
