@@ -14,6 +14,7 @@ const service = require('../controller/authController.js')
 router.put('/api/auth', function (req, res) {
     service.auth()
     .then(function(result){
+        console.log(req.body); 
         console.log("~back in express router~");
         console.log(result);
         res.send(result);

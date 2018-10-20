@@ -18,14 +18,17 @@ function testConnect() {
 
 function callAuth () {
     console.log("calling Auth");
-    return API.put('/auth', {
+    return API.put('/auth', this.state.formData) 
+    //{
         //replace below with the state object that comes from the client
-        account: config.account,
-        expiry: config.expiry,
-        amount: config.amount, 
-        merchid: config.merchid,
-        capture: config.capture
-    })
+    
+
+        // account: config.account,
+        // expiry: config.expiry,
+        // amount: config.amount, 
+        // merchid: config.merchid,
+        // capture: config.capture
+    //}
     .then(result => {
         return db.Auth.collection.insertOne(result.data);
         //write auth record to database 
