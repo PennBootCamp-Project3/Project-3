@@ -6,7 +6,7 @@ const authSchema = new Schema({
     respproc: { type: String, required: true },
     retref: { type: String, required: true },
     authcode: { type: String, required: true },
-    batchid: { type: String, required: true }, 
+    batchid: { type: String, required: false }, 
     authcode: { type: String, required: true },
     token: { type: String, required: true },
     account: { type: String, required: true },

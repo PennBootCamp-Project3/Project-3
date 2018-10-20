@@ -12,17 +12,11 @@ const service = require('../controller/authController.js')
 // })
 
 router.put('/api/auth', function (req, res) {
-    service.auth()
+    service.auth(req)
     .then(function(result){
-        console.log(req.body); 
-        console.log("~back in express router~");
-        console.log(result);
-        res.send(result);
+        // res.json(JSON.parse());
+        res.send(result[0]);
         return(result);
-    })
-    .then(function(otherResult){
-        console.log("-=-=-=-=-=-=-=-=-=-=-=-=-=");
-        // res.send("Looks good: " + otherResult);
     })
     .catch(function(error) {
         console.log(error);
