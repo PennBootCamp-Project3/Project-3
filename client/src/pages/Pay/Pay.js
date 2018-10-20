@@ -15,27 +15,25 @@ class Pay extends Component {
 constructor() {
     super();
     this.state = {
-    
-    formData: {
-        firstName: '',
-        lastName: '',
-        cardNum: '',
-        month: '',
-        year: '',
-        street: '',
-        apt: '',
-        city: '',
-        state: '', 
-        postal: '',
-        cardNum: '',
-        cvv: '',
-        year: '',
-        amount: ''
-    },
-
-    respData: {}
-    
-}}
+      // formData: {
+      //       firstName: '',
+      //       lastName: '',
+      //       cardNum: '',
+      //       month: '',
+      //       year: '',
+      //       street: '',
+      //       apt: '',
+      //       city: '',
+      //       state: '', 
+      //       postal: '',
+      //       cardNum: '',
+      //       cvv: '',
+      //       year: '',
+      //       amount: ''
+      //     },
+      respData: {}
+    } 
+  }
 
   handleChange = event => {
     const name = event.target.name;
@@ -47,10 +45,13 @@ constructor() {
   
   handleFormSubmit = event => {
     event.preventDefault();
-    console.log(this.state);
-      API.runAuth(this.state)
+    // console.log(this.state);
+    console.log(this.props.formData);
+      API.runAuth(this.state.formData)
       .then(result => {
-          console.log({respData: result.data});
+          console.log(result.data);
+            // {respData: result.data});  
+            // respData = result.data
       })
       .catch(error => {
           console.log(error);
