@@ -26,7 +26,7 @@ export default class LandingPage extends Component {
                       <Input label="Your email" icon="envelope" className="z-depth-2 white-text"/>
                       <Input label="Your password" icon="lock" type="password" className="z-depth-2 white-text"/>
                       <div className="text-center mt-4 black-text">
-                        <Button color="indigo">Sign Up</Button>
+                        <Button href="/home/" color="indigo">Sign Up</Button>
                       </div>
                     </CardBody>
                   </Card>
