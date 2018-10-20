@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Heading from "../../components/Nav/Nav";
 import PayForm from "../../components/payForm";
+import Panel from "../../components/panel";
 import FooterPage from "../../components/footer";
 import API from "../../utils/API";
 // import { ReactstrapInput } from "reactstrap-formik";
@@ -31,7 +32,7 @@ constructor() {
       //       year: '',
       //       amount: ''
       //     },
-      respData: {}
+      // respData: {}
     } 
   }
 
@@ -45,19 +46,25 @@ constructor() {
   
   handleFormSubmit = event => {
     event.preventDefault();
-    // console.log(this.state);
-    console.log(this.props.formData);
-      API.runAuth(this.state.formData)
+      API.runAuth(this.state)
       .then(result => {
-          console.log(result.data);
-            // {respData: result.data});  
-            // respData = result.data
+          this.state.respData = result.data;
+          console.log(this.state.respData);
+          this.populatePanel(this.state.respData);
+          // return this.state.respData;
+          
       })
       .catch(error => {
           console.log(error);
           throw error;
     })
   };
+
+  populatePanel = respData => {
+    console.log("in populatePanel")
+    console.log(respData);
+    console.log(this.state.respData);
+  }
 
   render() {
     return (
@@ -68,7 +75,11 @@ constructor() {
           <PayForm 
           formData={this.state}
           onSubmit={this.handleFormSubmit} 
-          onChange={this.handleChange}/>
+          onChange={this.handleChange}
+          />
+          <Panel
+          panelBody={this.state.respData}
+          />
         </div>
         <div>
 

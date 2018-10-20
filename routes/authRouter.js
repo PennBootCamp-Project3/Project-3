@@ -12,6 +12,7 @@ const service = require('../controller/authController.js')
 // })
 
 router.put('/api/auth', function (req, res) {
+    console.log(req.body);
     service.auth(req)
     .then(function(result){
         // res.json(JSON.parse());
