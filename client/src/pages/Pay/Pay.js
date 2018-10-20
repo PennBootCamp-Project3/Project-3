@@ -24,7 +24,7 @@ class Pay extends Component {
       state: '', 
       postal: '',
       cardNum: '',
-      cvv: ''
+      cvv: '',
       year: '',
       amount: ''
     };

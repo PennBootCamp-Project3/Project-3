@@ -42,11 +42,7 @@ export default class PayForm extends Component {
                   id="lastName" 
                   value={this.props.formData.lastName}
                   onChange={this.props.onChange}
-<<<<<<< HEAD
                   placeholder="Reed" />
-=======
-                  placeholder="" />
->>>>>>> f91a5fb041dda011a29777768496f92ca13eefec
               </FormGroup>
             </Col>
           </Row>
@@ -54,31 +50,21 @@ export default class PayForm extends Component {
             <Label for="billingAddress">Billing Address</Label>
             <Input 
               type="text" 
-<<<<<<< HEAD
               name="street" 
               id="street"
               value={this.props.formData.street} 
               onChange={this.props.onChange}
               placeholder="" 
             />
-=======
-              name="billing" id="billing" 
-              placeholder="" />
->>>>>>> f91a5fb041dda011a29777768496f92ca13eefec
           </FormGroup>
           <FormGroup>
             <Label for="billingAddress2">Apt/Suite</Label>
             <Input
               type="text"
-<<<<<<< HEAD
               name="apt"
               value={this.props.formData.apt} 
               onChange={this.props.onChange}
               id="apt"
-=======
-              name="billingTwo"
-              id="billingTwo"
->>>>>>> f91a5fb041dda011a29777768496f92ca13eefec
               placeholder=""
             />
           </FormGroup>
@@ -89,11 +75,8 @@ export default class PayForm extends Component {
                 <Input 
                   type="text" 
                   name="city" 
-<<<<<<< HEAD
                   value={this.props.formData.city} 
                   onChange={this.props.onChange}
-=======
->>>>>>> f91a5fb041dda011a29777768496f92ca13eefec
                   id="city" />
               </FormGroup>
             </Col>
@@ -102,13 +85,9 @@ export default class PayForm extends Component {
                 <Label for="state">State</Label>
                 <Input 
                   type="select" 
-<<<<<<< HEAD
                   name="state" 
                   value={this.props.formData.state} 
                   onChange={this.props.onChange}
-=======
-                  name="selectState" 
->>>>>>> f91a5fb041dda011a29777768496f92ca13eefec
                   id="selectState">
                   <option value="AL">Alabama</option>
                   <option value="AK">Alaska</option>
@@ -169,15 +148,10 @@ export default class PayForm extends Component {
                 <Label for="zip">Zip</Label>
                 <Input 
                   type="text" 
-<<<<<<< HEAD
                   name="postal" 
                   value={this.props.formData.postal} 
                   onChange={this.props.onChange}
                   id="postal" />
-=======
-                  name="zip" 
-                  id="zip" />
->>>>>>> f91a5fb041dda011a29777768496f92ca13eefec
               </FormGroup>
             </Col>
           </Row>
@@ -206,19 +180,11 @@ export default class PayForm extends Component {
                 <Label for="account">Card Number</Label>
                 <Input
                   type="text"
-<<<<<<< HEAD
                   name="account"
                   id="account"
                   value={this.props.formData.account} 
                   onChange={this.props.onChange}
                   placeholder="4444 3333 2222 1111"
-=======
-                  name="cardNum"
-                  id="cardNum"
-                  value={this.props.formData.cardNum}
-                  onChange={this.props.onChange}
-                  placeholder="0000-0000-0000-0000"
->>>>>>> f91a5fb041dda011a29777768496f92ca13eefec
                 />
               </FormGroup>
             </Col>
@@ -230,11 +196,8 @@ export default class PayForm extends Component {
                 <Input
                   type="text"
                   name="cvv"
-<<<<<<< HEAD
                   value={this.props.formData.cvv} 
                   onChange={this.props.onChange}
-=======
->>>>>>> f91a5fb041dda011a29777768496f92ca13eefec
                   id="cvv"
                   placeholder="123"
                 />
@@ -245,13 +208,9 @@ export default class PayForm extends Component {
                 <Label for="month">Expiration Month</Label>
                 <Input 
                   type="select" 
-<<<<<<< HEAD
                   name="month"
                   value={this.props.formData.month} 
                   onChange={this.props.onChange} 
-=======
-                  name="selectMonth" 
->>>>>>> f91a5fb041dda011a29777768496f92ca13eefec
                   id="selectMonth">
                   <option value="Jan">January</option>
                   <option value="Feb">February</option>
@@ -274,17 +233,10 @@ export default class PayForm extends Component {
                 <Input
                   type="text"
                   name="year"
-<<<<<<< HEAD
-                  id="exampleYear"
                   value={this.props.formData.year} 
                   onChange={this.props.onChange}
                   placeholder="2020"
-=======
                   id="year"
-                  value={this.props.formData.year}
-                  onChange={this.props.onChange}
-                  placeholder="2018"
->>>>>>> f91a5fb041dda011a29777768496f92ca13eefec
                 />
               </FormGroup>
             </Col>
