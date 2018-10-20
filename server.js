@@ -7,16 +7,17 @@ const API = require('./routes/authRouter');
 
 // const db = require('/.models');
 
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/payments");
 
-mongoose.Promise = require('bluebird');
-mongoose.connect('mongodb://localhost/payments')
-    .then(() => { // if all is ok we will be here
-      console.log('Start');
-    })
-    .catch(err => { // if error we will be here
-        console.error('App starting error:', err.stack);
-        process.exit(1);
-    });
+// mongoose.Promise = require('bluebird');
+// mongoose.connect('mongodb://localhost/payments')
+//     .then(() => { // if all is ok we will be here
+//       console.log('Start');
+//     })
+//     .catch(err => { // if error we will be here
+//         console.error('App starting error:', err.stack);
+//         process.exit(1);
+//     });
 
 
 // Use middlewares to post json data to the server

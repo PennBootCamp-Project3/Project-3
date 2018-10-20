@@ -1,6 +1,7 @@
 // const axios = require('axios');
 const API = require('../config/api-config');
 const config = require('../config/mid-config');
+const db = require('../models');
 
 //test connect function
 function testConnect() {
@@ -18,6 +19,7 @@ function testConnect() {
 function callAuth () {
     console.log("calling Auth");
     return API.put('/auth', {
+        //replace below with the state object that comes from the client
         account: config.account,
         expiry: config.expiry,
         amount: config.amount, 
@@ -25,8 +27,11 @@ function callAuth () {
         capture: config.capture
     })
     .then(result => {
-        console.log(result.data.resptext + "|" + result.data.retref);
-        return resp = result.data;
+        return db.Auth.collection.insertOne(result.data);
+        //write auth record to database 
+    })
+    .then(data => {
+        console.log(data);
     })
     .catch(error => {
         console.log(error);
