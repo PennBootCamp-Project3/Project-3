@@ -5,6 +5,7 @@ import FooterPage from "../../components/footer";
 import API from "../../utils/API";
 // import { ReactstrapInput } from "reactstrap-formik";
 
+// map the console logged data into a card 
 
 class Pay extends Component {
     
@@ -24,6 +25,8 @@ class Pay extends Component {
       postal: '',
       cardNum: '',
       cvv: ''
+      year: '',
+      amount: ''
     };
 
   handleChange = event => {
