@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import { Col, Row, Button, Form, FormGroup, Label, Input, CustomInput } from "reactstrap";
 // import API from '../../utils/API';
 
+
+// TO DO: add form validation on required fields and option selections
+
 export default class PayForm extends Component {
   render() {
     console.log(this.props);
@@ -22,7 +25,7 @@ export default class PayForm extends Component {
                   id="firstName" 
                   value={this.props.formData.firstName}
                   onChange={this.props.onChange}
-                  placeholder="" />
+                  placeholder="Lou" />
               </FormGroup>
             </Col>
             <Col md={6}>
@@ -30,10 +33,11 @@ export default class PayForm extends Component {
                 <Label for="lastName">Last Name</Label>
                 <Input 
                   type="name" 
-                  name="last" 
+                  name="lastName" 
                   id="lastName" 
-                  value={this.lastName}
-                  placeholder="" />
+                  value={this.props.formData.lastName}
+                  onChange={this.props.onChange}
+                  placeholder="Reed" />
               </FormGroup>
             </Col>
           </Row>
@@ -41,15 +45,21 @@ export default class PayForm extends Component {
             <Label for="billingAddress">Billing Address</Label>
             <Input 
               type="text" 
-              name="address" id="billing" 
-              placeholder="" />
+              name="street" 
+              id="street"
+              value={this.props.formData.street} 
+              onChange={this.props.onChange}
+              placeholder="" 
+            />
           </FormGroup>
           <FormGroup>
-            <Label for="billingAddress2">Address 2</Label>
+            <Label for="billingAddress2">Apt/Suite</Label>
             <Input
               type="text"
-              name="addressTwo"
-              id="billingTwo"
+              name="apt"
+              value={this.props.formData.apt} 
+              onChange={this.props.onChange}
+              id="apt"
               placeholder=""
             />
           </FormGroup>
@@ -60,7 +70,9 @@ export default class PayForm extends Component {
                 <Input 
                   type="text" 
                   name="city" 
-                  id="exampleCity" />
+                  value={this.props.formData.city} 
+                  onChange={this.props.onChange}
+                  id="city" />
               </FormGroup>
             </Col>
             <Col md={4}>
@@ -68,7 +80,9 @@ export default class PayForm extends Component {
                 <Label for="state">State</Label>
                 <Input 
                   type="select" 
-                  name="select" 
+                  name="state" 
+                  value={this.props.formData.state} 
+                  onChange={this.props.onChange}
                   id="selectState">
                   <option value="AL">Alabama</option>
                   <option value="AK">Alaska</option>
@@ -129,8 +143,10 @@ export default class PayForm extends Component {
                 <Label for="zip">Zip</Label>
                 <Input 
                   type="text" 
-                  name="zip" 
-                  id="exampleZip" />
+                  name="postal" 
+                  value={this.props.formData.postal} 
+                  onChange={this.props.onChange}
+                  id="postal" />
               </FormGroup>
             </Col>
           </Row>
@@ -156,13 +172,14 @@ export default class PayForm extends Component {
             </Col>
             <Col md={6}>
               <FormGroup>
-                <Label for="cardNumber">Card Number</Label>
+                <Label for="account">Card Number</Label>
                 <Input
                   type="text"
-                  name="number"
-                  id="cardNumber"
-                  // value={this.cardnum}
-                  placeholder="0000-0000-0000-0000"
+                  name="account"
+                  id="account"
+                  value={this.props.formData.account} 
+                  onChange={this.props.onChange}
+                  placeholder="4444 3333 2222 1111"
                 />
               </FormGroup>
             </Col>
@@ -173,19 +190,23 @@ export default class PayForm extends Component {
                 <Label for="CVV">CVC</Label>
                 <Input
                   type="text"
-                  name="CVV"
+                  name="cvv"
+                  value={this.props.formData.cvv} 
+                  onChange={this.props.onChange}
                   id="cvv"
-                  placeholder="000"
+                  placeholder="123"
                 />
               </FormGroup>
             </Col>
             <Col md={4}>
               <FormGroup>
-                <Label for="state">Expiration Month</Label>
+                <Label for="month">Expiration Month</Label>
                 <Input 
                   type="select" 
-                  name="select" 
-                  id="selectState">
+                  name="month"
+                  value={this.props.formData.month} 
+                  onChange={this.props.onChange} 
+                  id="selectMonth">
                   <option value="Jan">January</option>
                   <option value="Feb">February</option>
                   <option value="Mar">March</option>
@@ -206,10 +227,11 @@ export default class PayForm extends Component {
                 <Label for="zip">Year</Label>
                 <Input
                   type="text"
-                  name="zip"
-                  id="exampleZip"
-                  // value={this.year}
-                  placeholder="2018"
+                  name="year"
+                  id="exampleYear"
+                  value={this.props.formData.year} 
+                  onChange={this.props.onChange}
+                  placeholder="2020"
                 />
               </FormGroup>
             </Col>

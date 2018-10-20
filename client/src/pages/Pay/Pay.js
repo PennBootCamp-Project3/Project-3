@@ -12,17 +12,19 @@ class Pay extends Component {
   state = { 
       firstName: '',
       lastName: '',
+      // name: '',
       cardNum: '',
-      year: ''
+      month: '',
+      year: '',
+      // expiry: '',
+      street: '',
+      apt: '',
+      city: '',
+      state: '', 
+      postal: '',
+      cardNum: '',
+      cvv: ''
     };
-
-  //   handleInputChange = event => {
-  //   const name = event.target.name;
-  //   const value = event.target.value;
-  //   this.setState({
-  //     [name]: value
-  //   });
-  // };
 
   handleChange = event => {
     const name = event.target.name;
@@ -35,7 +37,7 @@ class Pay extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     console.log(this.state);
-    console.log("inside handle form")
+    // console.log("inside handle form")
     // if (this.state.cardNum && this.state.expiry) { //form validation
          // need to create a field for amount
       // })
