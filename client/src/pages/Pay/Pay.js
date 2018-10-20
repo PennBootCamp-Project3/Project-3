@@ -7,27 +7,35 @@ import API from "../../utils/API";
 
 // map the console logged data into a card 
 
+// separate into formData and responseData, this.state.response
+
+// setState {{responseData: api REsponse}}
+
 class Pay extends Component {
+constructor() {
+    super();
+    this.state = {
     
-  //API request object could be stored in state
-  state = { 
-      firstName: '',
-      lastName: '',
-      // name: '',
-      cardNum: '',
-      month: '',
-      year: '',
-      // expiry: '',
-      street: '',
-      apt: '',
-      city: '',
-      state: '', 
-      postal: '',
-      cardNum: '',
-      cvv: '',
-      year: '',
-      amount: ''
-    };
+    formData: {
+        firstName: '',
+        lastName: '',
+        cardNum: '',
+        month: '',
+        year: '',
+        street: '',
+        apt: '',
+        city: '',
+        state: '', 
+        postal: '',
+        cardNum: '',
+        cvv: '',
+        year: '',
+        amount: ''
+    },
+
+    respData: {}
+    
+}}
 
   handleChange = event => {
     const name = event.target.name;
@@ -40,13 +48,9 @@ class Pay extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     console.log(this.state);
-    // console.log("inside handle form")
-    // if (this.state.cardNum && this.state.expiry) { //form validation
-         // need to create a field for amount
-      // })
       API.runAuth(this.state)
       .then(result => {
-          console.log(result.data);
+          console.log({respData: result.data});
       })
       .catch(error => {
           console.log(error);
@@ -64,6 +68,9 @@ class Pay extends Component {
           formData={this.state}
           onSubmit={this.handleFormSubmit} 
           onChange={this.handleChange}/>
+        </div>
+        <div>
+
         </div>
         <div>
           <FooterPage />

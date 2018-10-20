@@ -2,19 +2,11 @@ import React, { Component } from "react";
 import { Col, Row, Button, Form, FormGroup, Label, Input, CustomInput } from "reactstrap";
 // import API from '../../utils/API';
 
-
-// TO DO: add form validation on required fields and option selections
-
 export default class PayForm extends Component {
   render() {
     console.log(this.props);
     return (
       <div className="col-md-6">
-        <container className="col-md-6">
-          <br />
-          <br />
-          <h5><strong>Results</strong></h5>
-      </container> 
         <br />
         <br />
         <h5><strong>Shipping Information</strong></h5>
@@ -30,7 +22,7 @@ export default class PayForm extends Component {
                   id="firstName" 
                   value={this.props.formData.firstName}
                   onChange={this.props.onChange}
-                  placeholder="Lou" />
+                  placeholder="" />
               </FormGroup>
             </Col>
             <Col md={6}>
@@ -42,7 +34,7 @@ export default class PayForm extends Component {
                   id="lastName" 
                   value={this.props.formData.lastName}
                   onChange={this.props.onChange}
-                  placeholder="Reed" />
+                  placeholder="" />
               </FormGroup>
             </Col>
           </Row>
@@ -50,21 +42,15 @@ export default class PayForm extends Component {
             <Label for="billingAddress">Billing Address</Label>
             <Input 
               type="text" 
-              name="street" 
-              id="street"
-              value={this.props.formData.street} 
-              onChange={this.props.onChange}
-              placeholder="" 
-            />
+              name="billing" id="billing" 
+              placeholder="" />
           </FormGroup>
           <FormGroup>
-            <Label for="billingAddress2">Apt/Suite</Label>
+            <Label for="billingAddress2">Address 2</Label>
             <Input
               type="text"
-              name="apt"
-              value={this.props.formData.apt} 
-              onChange={this.props.onChange}
-              id="apt"
+              name="billingTwo"
+              id="billingTwo"
               placeholder=""
             />
           </FormGroup>
@@ -75,8 +61,6 @@ export default class PayForm extends Component {
                 <Input 
                   type="text" 
                   name="city" 
-                  value={this.props.formData.city} 
-                  onChange={this.props.onChange}
                   id="city" />
               </FormGroup>
             </Col>
@@ -85,9 +69,7 @@ export default class PayForm extends Component {
                 <Label for="state">State</Label>
                 <Input 
                   type="select" 
-                  name="state" 
-                  value={this.props.formData.state} 
-                  onChange={this.props.onChange}
+                  name="selectState" 
                   id="selectState">
                   <option value="AL">Alabama</option>
                   <option value="AK">Alaska</option>
@@ -148,10 +130,8 @@ export default class PayForm extends Component {
                 <Label for="zip">Zip</Label>
                 <Input 
                   type="text" 
-                  name="postal" 
-                  value={this.props.formData.postal} 
-                  onChange={this.props.onChange}
-                  id="postal" />
+                  name="zip" 
+                  id="zip" />
               </FormGroup>
             </Col>
           </Row>
@@ -177,14 +157,14 @@ export default class PayForm extends Component {
             </Col>
             <Col md={6}>
               <FormGroup>
-                <Label for="account">Card Number</Label>
+                <Label for="cardNumber">Card Number</Label>
                 <Input
                   type="text"
-                  name="account"
-                  id="account"
-                  value={this.props.formData.account} 
+                  name="cardNum"
+                  id="cardNum"
+                  value={this.props.formData.cardNum}
                   onChange={this.props.onChange}
-                  placeholder="4444 3333 2222 1111"
+                  placeholder="0000-0000-0000-0000"
                 />
               </FormGroup>
             </Col>
@@ -196,10 +176,8 @@ export default class PayForm extends Component {
                 <Input
                   type="text"
                   name="cvv"
-                  value={this.props.formData.cvv} 
-                  onChange={this.props.onChange}
                   id="cvv"
-                  placeholder="123"
+                  placeholder="000"
                 />
               </FormGroup>
             </Col>
@@ -208,9 +186,7 @@ export default class PayForm extends Component {
                 <Label for="month">Expiration Month</Label>
                 <Input 
                   type="select" 
-                  name="month"
-                  value={this.props.formData.month} 
-                  onChange={this.props.onChange} 
+                  name="selectMonth" 
                   id="selectMonth">
                   <option value="Jan">January</option>
                   <option value="Feb">February</option>
@@ -233,10 +209,10 @@ export default class PayForm extends Component {
                 <Input
                   type="text"
                   name="year"
-                  value={this.props.formData.year} 
-                  onChange={this.props.onChange}
-                  placeholder="2020"
                   id="year"
+                  value={this.props.formData.year}
+                  onChange={this.props.onChange}
+                  placeholder="2018"
                 />
               </FormGroup>
             </Col>
