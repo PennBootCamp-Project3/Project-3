@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Col, Row, Button, Form, FormGroup, Label, Input, CustomInput } from "reactstrap";
+import { Col, Row, Button, Form, FormGroup, Label, Input, CustomInput} from "reactstrap";
 // import API from '../../utils/API';
 
 export default class PayForm extends Component {
@@ -264,7 +264,7 @@ export default class PayForm extends Component {
             </Col>
           </Row>
           <Button 
-          onClick={this.props.onSubmit}
+            onClick={this.props.onSubmit}
             color="indigo"
             type="submit"
             // value="Submit"

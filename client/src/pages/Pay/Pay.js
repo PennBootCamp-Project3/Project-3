@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Heading from "../../components/Nav/Nav";
 import PayForm from "../../components/payForm";
-import Panel from "../../components/panel";
+import Panel from "../../components/card";
+import CardText from "../../components/cardtext"
 import FooterPage from "../../components/footer";
 import API from "../../utils/API";
 // import { ReactstrapInput } from "reactstrap-formik";
@@ -13,28 +14,12 @@ import API from "../../utils/API";
 // setState {{responseData: api REsponse}}
 
 class Pay extends Component {
-constructor() {
-    super();
+constructor(props) {
+    super(props);
     this.state = {
-      // formData: {
-      //       firstName: '',
-      //       lastName: '',
-      //       cardNum: '',
-      //       month: '',
-      //       year: '',
-      //       street: '',
-      //       apt: '',
-      //       city: '',
-      //       state: '', 
-      //       postal: '',
-      //       cardNum: '',
-      //       cvv: '',
-      //       year: '',
-      //       amount: ''
-      //     },
-      // respData: {}
-    } 
-  }
+         
+    }
+}
 
   handleChange = event => {
     const name = event.target.name;
@@ -49,13 +34,12 @@ constructor() {
       API.runAuth(this.state)
       .then(result => {
           console.log(result.data);
-          // console.log(this.state);
-          // console.log(result.data);
-          // this.state.respData = result.data;
-          // console.log(this.state.respData);
-          // console.log("back on pay");
-          // this.populatePanel(this.state.respData);
-          // return this.state.respData;
+          console.log(this.state)
+          // this.setState({
+          //   state = result.data
+          // })
+          // console.log(props);
+          // this.setState({update: result.data});
       })
       .catch(error => {
           console.log(error);
@@ -63,34 +47,37 @@ constructor() {
     })
   };
 
-  populatePanel = respData => {
-    console.log("in populatePanel")
-    // console.log(respData);
-    // console.log(this.state.respData);
-  }
+  // updateCard = event => {
+  //   event.preventDefault();
+  //   // console.log(respData);
+  //   console.log(this.props.children.props)
+  // }
 
   render() {
     return (
-      <React.Fragment>
+      <>
         <Heading />
         <br />
         <div class="container">
           <PayForm 
-          formData={this.state}
-          onSubmit={this.handleFormSubmit} 
-          onChange={this.handleChange}
+            formData={this.state}
+            onSubmit={this.handleFormSubmit} 
+            onChange={this.handleChange}
           />
-          {/* <Panel
-          panelBody={this.state.respData}
-          /> */}
+          
         </div>
         <div>
-
+          <Panel>
+            <CardText 
+            cardText={JSON.stringify(this.state)}
+              />
+          </Panel>
         </div>
+    
         <div>
           <FooterPage />
         </div>
-      </React.Fragment>
+      </>
     );
   }
 }
