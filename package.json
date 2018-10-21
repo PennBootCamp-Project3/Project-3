@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "seed": "node scripts/authDB.js"
+    "seed": "node scripts/authDB.js",
+    "postinstall":"npm run build"
   },
   "author": "",
   "license": "ISC",
