@@ -3,12 +3,19 @@ const app = express();
 const mongoose = require('mongoose');
 const PORT = process.env.PORT || 5000;
 const cors = require('cors');
+
 const API = require('./routes/authRouter');
 const MONGODB_URI = "mongodb://knathan:database1@ds237713.mlab.com:37713/heroku_95h5dfww" || "mongodb://localhost/payments"
 
 // const db = require('/.models');
 mongoose.Promist = Promise;
-mongoose.connect(MONGODB_URI);
+mongoose.connect(MONGODB_URI).then(()=> {
+  console.log(`connected to database + ${MONGODB_URI}`);
+  })
+  .catch(err => {
+    console.log('connection error', err.stack);
+  });
+
 
 // mongoose.Promise = require('bluebird');
 // mongoose.connect('mongodb://localhost/payments')
