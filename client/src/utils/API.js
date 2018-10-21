@@ -9,7 +9,11 @@ export default  {
     },
 
     runAuth: function(data) {
-        return axios.put('/api/auth', data);
+        return axios.put('/api/auth', data)
+        .then(result => {
+            console.log(result.status + " || " + result.statusText );
+            return result;
+        });
     }
 }
 

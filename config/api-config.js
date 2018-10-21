@@ -6,7 +6,10 @@ const API = axios.create({
         username: 'testing',
         password: 'testing123'
       },
-    headers: {'Content-Type': 'application/json'}
+    headers: {'Content-Type': 'application/json'},
+    data: {
+        merchid: '496160873888'
+    }
   });
 
 

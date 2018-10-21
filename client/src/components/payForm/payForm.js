@@ -13,26 +13,14 @@ export default class PayForm extends Component {
         <hr />
         <Form >
           <Row form>
-            <Col md={6}>
+            <Col md={12}>
               <FormGroup>
-                <Label for="firstName">First Name</Label>
+                <Label for="name">Full Name</Label>
                 <Input 
                   type="name" 
-                  name="firstName" 
-                  id="firstName" 
-                  value={this.props.formData.firstName}
-                  onChange={this.props.onChange}
-                  placeholder="" />
-              </FormGroup>
-            </Col>
-            <Col md={6}>
-              <FormGroup>
-                <Label for="lastName">Last Name</Label>
-                <Input 
-                  type="name" 
-                  name="lastName" 
-                  id="lastName" 
-                  value={this.props.formData.lastName}
+                  name="name" 
+                  id="name" 
+                  value={this.props.formData.name}
                   onChange={this.props.onChange}
                   placeholder="" />
               </FormGroup>
@@ -174,9 +162,9 @@ export default class PayForm extends Component {
                 <Label for="cardNumber">Card Number</Label>
                 <Input
                   type="text"
-                  name="cardNum"
-                  id="cardNum"
-                  value={this.props.formData.cardNum}
+                  name="account"
+                  id="account"
+                  value={this.props.formData.account}
                   onChange={this.props.onChange}
                   placeholder="0000-0000-0000-0000"
                 />
@@ -184,6 +172,19 @@ export default class PayForm extends Component {
             </Col>
           </Row>
           <Row form>
+          <Col md={4}>
+              <FormGroup>
+                <Label for="expiry">Expiration Date</Label>
+                <Input
+                  type="text"
+                  name="expiry"
+                  id="expiry"
+                  value={this.props.formData.expiry}
+                  onChange={this.props.onChange}
+                  placeholder="MMYY"
+                />
+              </FormGroup>
+            </Col>
             <Col md={4}>
               <FormGroup>
                 <Label for="CVV">CVC</Label>
@@ -197,6 +198,20 @@ export default class PayForm extends Component {
               </FormGroup>
             </Col>
             <Col md={4}>
+            <FormGroup>
+                <Label for="amount">Amount</Label>
+                <Input
+                  type="text"
+                  name="amount"
+                  id="amount"
+                  value={this.props.formData.amount}
+                  onChange={this.props.onChange}
+                  placeholder="$50.00"
+                />
+              </FormGroup>
+            </Col>
+            </Row>
+            {/* <Col md={4}>
               <FormGroup>
                 <Label for="month">Expiration Month</Label>
                 <Input 
@@ -219,36 +234,7 @@ export default class PayForm extends Component {
                   <option value="Dec">December</option>
                 </Input>
               </FormGroup>
-            </Col>
-            <Col md={4}>
-              <FormGroup>
-                <Label for="year">Year</Label>
-                <Input
-                  type="text"
-                  name="year"
-                  id="year"
-                  value={this.props.formData.year}
-                  onChange={this.props.onChange}
-                  placeholder="2018"
-                />
-              </FormGroup>
-            </Col>
-          </Row>
-          <Row>
-            <Col md={12}>
-            <FormGroup>
-                <Label for="amount">Amount</Label>
-                <Input
-                  type="text"
-                  name="amount"
-                  id="amount"
-                  value={this.props.formData.amount}
-                  onChange={this.props.onChange}
-                  placeholder="$50.00"
-                />
-              </FormGroup>
-            </Col>
-         </Row>
+            </Col> */}
         </Form>
         <br/>
         <h5><strong>Profile</strong></h5>

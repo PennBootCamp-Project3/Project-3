@@ -11,16 +11,21 @@ const service = require('../controller/authController.js')
 //     res.json("OK");
 // })
 
-router.put('/api/auth', function (req, res) {
-    // console.log(req.body);
-    service.auth(req)
-    .then(function(result){
-        // res.json(JSON.parse());
-        res.send(result[0]);
-        return(result);
+router.put('/api/auth', function (req,res) {
+    //logging incoming request
+    console.log("_______________________Request_______________________")
+    console.log(req.body);
+    return service.auth(req)
+    .then(result => {
+        //logging response returned from mongoose insert
+        console.log("_______________________Response_______________________");
+        console.log(result.data);
+        res.json(result.data);
+        // return result.data;
     })
-    .catch(function(error) {
-        // console.log(error);
+    .catch(error => {
+        console.log(error);
+        throw error;
     });
 })
 

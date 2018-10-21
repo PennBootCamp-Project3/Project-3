@@ -48,11 +48,14 @@ constructor() {
     event.preventDefault();
       API.runAuth(this.state)
       .then(result => {
-          this.state.respData = result.data;
+          console.log(result.data);
+          // console.log(this.state);
+          // console.log(result.data);
+          // this.state.respData = result.data;
           // console.log(this.state.respData);
+          // console.log("back on pay");
           // this.populatePanel(this.state.respData);
           // return this.state.respData;
-          
       })
       .catch(error => {
           console.log(error);
