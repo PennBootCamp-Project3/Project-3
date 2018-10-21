@@ -11,7 +11,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "seed": "node scripts/authDB.js"
-    
   },
   "author": "",
   "license": "ISC",
@@ -21,6 +20,7 @@
     "cors": "^2.8.4",
     "express": "^4.16.4",
     "foreman": "3.0.1",
+    "mongodb": "3.1.8",
     "mongoose": "^5.3.4",
     "nodemon": "^1.18.4"
   }
