@@ -49,8 +49,8 @@ constructor() {
       API.runAuth(this.state)
       .then(result => {
           this.state.respData = result.data;
-          console.log(this.state.respData);
-          this.populatePanel(this.state.respData);
+          // console.log(this.state.respData);
+          // this.populatePanel(this.state.respData);
           // return this.state.respData;
           
       })
@@ -62,8 +62,8 @@ constructor() {
 
   populatePanel = respData => {
     console.log("in populatePanel")
-    console.log(respData);
-    console.log(this.state.respData);
+    // console.log(respData);
+    // console.log(this.state.respData);
   }
 
   render() {
@@ -77,9 +77,9 @@ constructor() {
           onSubmit={this.handleFormSubmit} 
           onChange={this.handleChange}
           />
-          <Panel
+          {/* <Panel
           panelBody={this.state.respData}
-          />
+          /> */}
         </div>
         <div>
 

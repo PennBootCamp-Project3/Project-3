@@ -5,7 +5,8 @@ const API = axios.create({
     auth: {
         username: 'testing',
         password: 'testing123'
-      }
+      },
+    headers: {'Content-Type': 'application/json'}
   });
 
 

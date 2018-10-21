@@ -16,28 +16,30 @@ function testConnect() {
     });  
 }
 
-function callAuth () {
-    console.log("calling Auth");
-    return API.put('/auth', 
+function callAuth (req) {
+    console.log(req.body);
+     return API.put('/auth', req.body)
     // this.state.formData) 
-    {
-        //replace below with the state object that comes from the client
-        account: config.account,
-        expiry: config.expiry,
-        amount: config.amount, 
-        merchid: config.merchid,
-        capture: config.capture
-    })
+    // {
+    //     //replace below with the state object that comes from the client
+    //     account: config.account,
+    //     expiry: config.expiry,
+    //     amount: config.amount, 
+    //     merchid: config.merchid,
+    //     capture: config.capture
+    // .then(result => {
+    //     return db.Auth.collection.insertOne(result.data);
+    //     //write auth record to database 
+    // })
+    // .then(data => {
+    //     // console.log(data.ops);
+    //     return(data.ops);
+    // })
     .then(result => {
-        return db.Auth.collection.insertOne(result.data);
-        //write auth record to database 
-    })
-    .then(data => {
-        console.log(data.ops);
-        return(data.ops);
+        console.log(result);
     })
     .catch(error => {
-        console.log(error);
+        // console.log(error);
         throw error;
     })
 }
