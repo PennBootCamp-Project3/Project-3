@@ -4,10 +4,11 @@ const mongoose = require('mongoose');
 const PORT = process.env.PORT || 5000;
 const cors = require('cors');
 const API = require('./routes/authRouter');
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/payments"
 
 // const db = require('/.models');
-
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/payments");
+mongoose.Promist = Promise;
+mongoose.connect(MONGODB_URI);
 
 // mongoose.Promise = require('bluebird');
 // mongoose.connect('mongodb://localhost/payments')
