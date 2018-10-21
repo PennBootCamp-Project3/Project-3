@@ -20,6 +20,7 @@
     "bluebird": "^3.5.2",
     "cors": "^2.8.4",
     "express": "^4.16.4",
+    "foreman": "3.0.1",
     "mongoose": "^5.3.4",
     "nodemon": "^1.18.4"
   }
