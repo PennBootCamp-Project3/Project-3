@@ -1,5 +1,5 @@
 {
-  "name": "expressrouter",
+  "name": "react-pay-server",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -11,7 +11,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "seed": "node scripts/authDB.js",
-    "heroku-postbuild": "cd client/ && npm install && npm run build"
+    "build": "cd client && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
