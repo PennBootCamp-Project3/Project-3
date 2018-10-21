@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const PORT = process.env.PORT || 5000;
 const cors = require('cors');
 const API = require('./routes/authRouter');
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/payments"
+const MONGODB_URI = "mongodb://knathan:database1@ds237713.mlab.com:37713/heroku_95h5dfww" || "mongodb://localhost/payments"
 
 // const db = require('/.models');
 mongoose.Promist = Promise;
