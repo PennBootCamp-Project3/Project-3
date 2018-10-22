@@ -19,7 +19,7 @@ export default class PayForm extends Component {
   render() {
     console.log(this.props);
     return (
-      <div>
+      <div className="container">
         <br />
         <br />
         <h5>
@@ -42,7 +42,7 @@ export default class PayForm extends Component {
               </FormGroup>
             </Col>
             <Col md={6}>
-              <Card style={{ marginLeft: "30px" }}>
+              <Card>
                 <CardBody>
                   <CardTitle>Submit Order Results</CardTitle>
                   <CardText cardText={JSON.stringify(this.state)} />
