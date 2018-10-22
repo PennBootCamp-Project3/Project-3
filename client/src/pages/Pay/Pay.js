@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Heading from "../../components/Nav/Nav";
 import PayForm from "../../components/payForm";
 import Panel from "../../components/card";
-import CardText from "../../components/cardtext"
+import CardText from "../../components/cardtext";
 import FooterPage from "../../components/footer";
 import API from "../../utils/API";
 // import { ReactstrapInput } from "reactstrap-formik";
@@ -11,8 +11,13 @@ class Pay extends Component {
 constructor(props) {
     super(props);
     this.state = {
-         
-    }
+     formData: {
+
+     },
+     responseData: {
+
+     }    
+    };
 }
 
   handleChange = event => {
@@ -38,7 +43,7 @@ constructor(props) {
       .catch(error => {
           console.log(error);
           throw error;
-    })
+    });
   };
 
   // updateCard = event => {
@@ -55,7 +60,7 @@ constructor(props) {
         <div class="container">
           <PayForm 
             formData={this.state}
-            onSubmit={this.handleFormSubmit} 
+            onSubmit={this.handleFormSubmit.bind(this)} 
             onChange={this.handleChange}
           />
           

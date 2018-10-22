@@ -10,11 +10,10 @@ import {
   CustomInput,
   Card,
   CardBody,
-  CardTitle,
-  CardText
+  CardTitle
 } from "reactstrap";
-import "./payForm.css";
-// import API from '../../utils/API';
+import CardText from "../../components/cardtext";
+// import API from "../../utils/API";
 
 export default class PayForm extends Component {
   render() {
@@ -46,9 +45,7 @@ export default class PayForm extends Component {
               <Card style={{ marginLeft: "30px" }}>
                 <CardBody>
                   <CardTitle>Submit Order Results</CardTitle>
-                  <CardText>
-                    Display results here. 
-                  </CardText>
+                  <CardText cardText={JSON.stringify(this.state)} />
                 </CardBody>
               </Card>
             </Col>
