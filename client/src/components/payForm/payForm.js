@@ -1,74 +1,111 @@
 import React, { Component } from "react";
-import { Col, Row, Button, Form, FormGroup, Label, Input, CustomInput} from "reactstrap";
+import {
+  Col,
+  Row,
+  Button,
+  Form,
+  FormGroup,
+  Label,
+  Input,
+  CustomInput,
+  Card,
+  CardBody,
+  CardTitle,
+  CardText
+} from "reactstrap";
+import "./payForm.css";
 // import API from '../../utils/API';
 
 export default class PayForm extends Component {
   render() {
     console.log(this.props);
     return (
-      <div className="col-md-6">
+      <div>
         <br />
         <br />
-        <h5><strong>Shipping Information</strong></h5>
+        <h5>
+          <strong>Shipping Information</strong>
+        </h5>
         <hr />
-        <Form >
-          <Row form>
-            <Col md={12}>
-              <FormGroup>
-                <Label for="name">Full Name</Label>
-                <Input 
-                  type="name" 
-                  name="name" 
-                  id="name" 
-                  value={this.props.formData.name}
-                  onChange={this.props.onChange}
-                  placeholder="" />
-              </FormGroup>
-            </Col>
-          </Row>
-          <FormGroup>
-            <Label for="billingAddress">Billing Address</Label>
-            <Input 
-              type="text" 
-              name="street" 
-              id="street" 
-              value={this.props.formData.street}
-              onChange={this.props.onChange}
-              placeholder="" />
-          </FormGroup>
-          <FormGroup>
-            <Label for="billingAddress2">Address 2</Label>
-            <Input
-              type="text"
-              name="apt"
-              id="apt"
-              value={this.props.formData.apt}
-              onChange={this.props.onChange}
-              placeholder=""
-            />
-          </FormGroup>
+        <Form className>
           <Row form>
             <Col md={6}>
               <FormGroup>
-                <Label for="city">City</Label>
-                <Input 
-                  type="text" 
-                  name="city" 
-                  value={this.props.formData.city}
+                <Label for="name">Full Name</Label>
+                <Input
+                  type="name"
+                  name="name"
+                  id="name"
+                  value={this.props.formData.name}
                   onChange={this.props.onChange}
-                  id="city" 
-              />
+                  placeholder=""
+                />
               </FormGroup>
             </Col>
-            <Col md={4}>
+            <Col md={6}>
+              <Card style={{ marginLeft: "30px" }}>
+                <CardBody>
+                  <CardTitle>Submit Order Results</CardTitle>
+                  <CardText>
+                    Display results here. 
+                  </CardText>
+                </CardBody>
+              </Card>
+            </Col>
+          </Row>
+          <Row form>
+            <Col md={6}>
+              <FormGroup>
+                <Label for="billingAddress">Billing Address</Label>
+                <Input
+                  type="text"
+                  name="street"
+                  id="street"
+                  value={this.props.formData.street}
+                  onChange={this.props.onChange}
+                  placeholder=""
+                />
+              </FormGroup>
+            </Col>
+          </Row>
+          <Row form>
+            <Col md={6}>
+              <FormGroup>
+                <Label for="billingAddress2">Address 2</Label>
+                <Input
+                  type="text"
+                  name="apt"
+                  id="apt"
+                  value={this.props.formData.apt}
+                  onChange={this.props.onChange}
+                  placeholder=""
+                />
+              </FormGroup>
+            </Col>
+          </Row>
+          <Row form>
+            <Col md={3}>
+              <FormGroup>
+                <Label for="city">City</Label>
+                <Input
+                  type="text"
+                  name="city"
+                  value={this.props.formData.city}
+                  onChange={this.props.onChange}
+                  id="city"
+                />
+              </FormGroup>
+            </Col>
+            <Col md={2}>
               <FormGroup>
                 <Label for="state">State</Label>
-                <Input 
-                  type="select" 
-                  name="selectState" 
+                <Input
+                  type="select"
+                  name="selectState"
                   id="selectState"
                   value={this.props.formData.selectState}
-                  onChange={this.props.onChange}>
+                  onChange={this.props.onChange}
+                >
                   <option value="AL">Alabama</option>
                   <option value="AK">Alaska</option>
                   <option value="AZ">Arizona</option>
@@ -123,33 +160,37 @@ export default class PayForm extends Component {
                 </Input>
               </FormGroup>
             </Col>
-            <Col md={2}>
+            <Col md={1}>
               <FormGroup>
                 <Label for="zip">Zip</Label>
-                <Input 
-                  type="text" 
-                  name="postal" 
+                <Input
+                  type="text"
+                  name="postal"
                   value={this.props.formData.postal}
                   onChange={this.props.onChange}
-                  id="postal" />
+                  id="postal"
+                />
               </FormGroup>
             </Col>
           </Row>
         </Form>
-        <br/>
-        <h5><strong>Billing Information</strong></h5>
+        <br />
+        <h5>
+          <strong>Billing Information</strong>
+        </h5>
         <hr />
         <Form>
           <Row form>
             <Col md={6}>
               <FormGroup>
                 <Label for="cardType">Card Type</Label>
-                <Input 
-                  type="select" 
-                  name="cardType" 
+                <Input
+                  type="select"
+                  name="cardType"
                   value={this.props.formData.cardType}
                   onChange={this.props.onChange}
-                  id="cardType">
+                  id="cardType"
+                >
                   <option value="Visa">Visa</option>
                   <option value="Mastercard">Mastercard</option>
                   <option values="American Express">American Express</option>
@@ -172,7 +213,7 @@ export default class PayForm extends Component {
             </Col>
           </Row>
           <Row form>
-          <Col md={4}>
+            <Col md={6}>
               <FormGroup>
                 <Label for="expiry">Expiration Date</Label>
                 <Input
@@ -185,20 +226,21 @@ export default class PayForm extends Component {
                 />
               </FormGroup>
             </Col>
-            <Col md={4}>
+            <Col md={3}>
               <FormGroup>
                 <Label for="CVV">CVC</Label>
                 <Input
                   type="text"
                   name="cvv"
-                  id="cvv"value={this.props.formData.cvv}
+                  id="cvv"
+                  value={this.props.formData.cvv}
                   onChange={this.props.onChange}
                   placeholder="000"
                 />
               </FormGroup>
             </Col>
-            <Col md={4}>
-            <FormGroup>
+            <Col md={3}>
+              <FormGroup>
                 <Label for="amount">Amount</Label>
                 <Input
                   type="text"
@@ -210,8 +252,8 @@ export default class PayForm extends Component {
                 />
               </FormGroup>
             </Col>
-            </Row>
-            {/* <Col md={4}>
+          </Row>
+          {/* <Col md={4}>
               <FormGroup>
                 <Label for="month">Expiration Month</Label>
                 <Input 
@@ -236,41 +278,51 @@ export default class PayForm extends Component {
               </FormGroup>
             </Col> */}
         </Form>
-        <br/>
-        <h5><strong>Profile</strong></h5>
+        <br />
+        <h5>
+          <strong>Profile</strong>
+        </h5>
         <hr />
         <Form>
           <Row form>
             <Col md={12}>
               <FormGroup>
                 <Label for="cardType">Send Receipt To:</Label>
-                <Input 
-                  type="select" 
-                  name="receipt" 
+                <Input
+                  type="select"
+                  name="receipt"
                   value={this.props.formData.profile}
                   onChange={this.props.onChange}
-                  id="receipt">
+                  id="receipt"
+                >
                   <option value="Saved">Saved Contacts</option>
                   <option value="Taub">Dean Taub</option>
                 </Input>
               </FormGroup>
             </Col>
-            <Col md={6}>
+            <Col md={12}>
               <FormGroup>
                 <div>
-                  <CustomInput type="radio" id="saveProfile" name="customRadio" label="Save Profile" />
+                  <CustomInput
+                    type="radio"
+                    id="saveProfile"
+                    name="customRadio"
+                    label="Save Profile"
+                  />
                 </div>
               </FormGroup>
             </Col>
           </Row>
-          <Button 
+          <Button
             onClick={this.props.onSubmit}
             color="indigo"
             type="submit"
             // value="Submit"
-            >Submit Order</Button>
+          >
+            Submit Order
+          </Button>
         </Form>
-      </div> 
+      </div>
     );
   }
 }

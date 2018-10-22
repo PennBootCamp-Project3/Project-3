@@ -7,12 +7,6 @@ import FooterPage from "../../components/footer";
 import API from "../../utils/API";
 // import { ReactstrapInput } from "reactstrap-formik";
 
-// map the console logged data into a card 
-
-// separate into formData and responseData, this.state.response
-
-// setState {{responseData: api REsponse}}
-
 class Pay extends Component {
 constructor(props) {
     super(props);
