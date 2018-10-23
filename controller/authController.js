@@ -1,6 +1,6 @@
 // const axios = require('axios');
-const API = require('../config/api-config');
-const config = require('../config/mid-config');
+const API = require('../payconfig/api-config');
+const config = require('../payconfig/mid-config');
 const db = require('../models');
 
 //test connect function
@@ -33,6 +33,18 @@ function callAuth (req) {
         throw error;
     })
 }
+
+function callReport () {
+    return db.Auth.find()
+    .then(result => {
+        return result
+    })
+    .catch(error => {
+        console.log(error);
+        throw error;
+    })
+}
+
 
 function callVoid () {
     console.log("calling Void");
@@ -84,7 +96,8 @@ const service = {
     auth: callAuth,
     void: callVoid,
     refund: callRefund,
-    inquire: callInquire
+    inquire: callInquire,
+    report: callReport
 }
 
 module.exports = service;

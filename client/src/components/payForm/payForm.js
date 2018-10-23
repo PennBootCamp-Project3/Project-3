@@ -40,15 +40,17 @@ export default class PayForm extends Component {
                   placeholder=""
                 />
               </FormGroup>
-            </Col>
-            <Col md={6}>
+              </Col>
+            {/* <Col md={6}>
               <Card>
                 <CardBody>
                   <CardTitle>Submit Order Results</CardTitle>
-                  <CardText cardText={JSON.stringify(this.state)} />
+                  <CardText 
+                    cardText={JSON.stringify(this.props.populate)} 
+                  />
                 </CardBody>
               </Card>
-            </Col>
+            </Col> */}
           </Row>
           <Row form>
             <Col md={6}>
@@ -193,7 +195,7 @@ export default class PayForm extends Component {
                   <option values="American Express">American Express</option>
                   <option values="Discover">Discover</option>
                 </Input>
-              </FormGroup>
+              </FormGroup> 
             </Col>
             <Col md={6}>
               <FormGroup>

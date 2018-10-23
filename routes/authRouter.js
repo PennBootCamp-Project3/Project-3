@@ -29,6 +29,20 @@ router.put('/api/auth', function (req,res) {
     });
 })
 
+
+router.get('/api/report', function (req, res) {
+    console.log("in /api/report route")
+    return service.report(req)
+    .then(result => {
+        console.log(result);
+        res.json(result);
+    })
+    .catch(error => {
+        console.log(error);
+        throw error;
+    })
+
+})
 // router.put('/api/void', function (req, res, next) {
 //     service.void();
 // })
