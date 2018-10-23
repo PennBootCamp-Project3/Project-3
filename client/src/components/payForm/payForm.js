@@ -19,14 +19,14 @@ export default class PayForm extends Component {
   render() {
     console.log(this.props);
     return (
-      <div className="container">
+      <div className="container-fluid">
         <br />
         <br />
         <h5>
           <strong>Shipping Information</strong>
         </h5>
         <hr />
-        <Form className>
+        <Form id="clear-form">
           <Row form>
             <Col md={6}>
               <FormGroup>

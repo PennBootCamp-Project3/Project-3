@@ -33,7 +33,7 @@ constructor(props) {
       API.runAuth(this.state)
       .then(result => {
           console.log(result.data);
-          console.log(this.state)
+          console.log(this.state);
           // this.setState({
           //   state = result.data
           // })
@@ -60,7 +60,7 @@ constructor(props) {
         <div class="container">
           <PayForm 
             formData={this.state}
-            onSubmit={this.handleFormSubmit.bind(this)} 
+            onSubmit={this.handleFormSubmit} 
             onChange={this.handleChange}
           />
           
