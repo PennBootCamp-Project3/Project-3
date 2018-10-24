@@ -52,11 +52,13 @@ export default class HomeForm extends Component {
           <CardGroup deck>
             <Card>
               <CardImage
-                src="https://mdbootstrap.com/img/Photos/Others/images/49.jpg"
+                src="https://cnet4.cbsistatic.com/img/Rqm7hXG97mXSygSDCGUGkGwisKw=/1600x900/2017/03/23/0beb231b-cfdc-4229-9752-8b095e6dcc92/credit-card-processing-pos.jpg"
                 alt="Card image cap"
                 top
                 hover
                 overlay="white-slight"
+                height="140px"
+                width="100%"
               />
               <CardBody>
                 <CardTitle tag="h5">Setup Your Account</CardTitle>
@@ -64,7 +66,7 @@ export default class HomeForm extends Component {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </CardText>
-                <Button href="/pay/" color="primary">
+                <Button href="/pay/" color="indigo">
                   Go
                 </Button>
               </CardBody>
@@ -72,11 +74,13 @@ export default class HomeForm extends Component {
 
             <Card>
               <CardImage
-                src="https://mdbootstrap.com/img/Photos/Others/images/48.jpg"
+                src="https://www.patriotsoftware.com/payroll/training/blog/wp-content/uploads/2014/10/pay-frequency-RS11238-compressor.jpg"
                 alt="Card image cap"
                 top
                 hover
                 overlay="white-slight"
+                height="140px"
+                width="100%"
               />
               <CardBody>
                 <CardTitle tag="h5">Choose Your Frequency</CardTitle>
@@ -84,7 +88,7 @@ export default class HomeForm extends Component {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </CardText>
-                <Button href="/bill/" color="primary">
+                <Button href="/bill/" color="indigo">
                   Go
                 </Button>
               </CardBody>
@@ -92,11 +96,13 @@ export default class HomeForm extends Component {
 
             <Card>
               <CardImage
-                src="https://mdbootstrap.com/img/Photos/Others/images/77.jpg"
+                src="https://img-aws.ehowcdn.com/877x500p/photos.demandstudios.com/getty/article/114/132/80403526.jpg"
                 alt="Card image cap"
                 top
                 hover
                 overlay="white-slight"
+                height="140px"
+                width="100%"
               />
               <CardBody>
                 <CardTitle tag="h5">View Your Reports</CardTitle>
@@ -104,18 +110,20 @@ export default class HomeForm extends Component {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </CardText>
-                <Button href="/report/" color="primary">
+                <Button href="/report/" color="indigo">
                   Go
                 </Button>
               </CardBody>
             </Card>
             <Card>
               <CardImage
-                src="https://mdbootstrap.com/img/Photos/Others/images/49.jpg"
+                src="https://images.pexels.com/photos/1068523/pexels-photo-1068523.jpeg?auto=compress&cs=tinysrgb&h=350"
                 alt="Card image cap"
                 top
                 hover
                 overlay="white-slight"
+                height="140px"
+                width="100%"
               />
               <CardBody>
                 <CardTitle tag="h5">Set Your Configuration</CardTitle>
@@ -123,7 +131,7 @@ export default class HomeForm extends Component {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </CardText>
-                <Button href="/config/" color="primary">
+                <Button href="/config/" color="indigo">
                   Go
                 </Button>
               </CardBody>
@@ -131,11 +139,13 @@ export default class HomeForm extends Component {
 
             <Card>
               <CardImage
-                src="https://mdbootstrap.com/img/Photos/Others/images/77.jpg"
+                src="https://i.amz.mshcdn.com/-EF6JaCjF7129H3sCEzt9M-nO5o=/fit-in/850x850/https%3A%2F%2Fmashable.com%2Fwp-content%2Fgallery%2Fvince-vaughn-stock-photos%2FiStock-Unfinished-Business-5.jpg"
                 alt="Card image cap"
                 top
                 hover
                 overlay="white-slight"
+                height="140px"
+                width="100%"
               />
               <CardBody>
                 <CardTitle tag="h5">Logout of Your Account</CardTitle>
@@ -143,7 +153,7 @@ export default class HomeForm extends Component {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </CardText>
-                <Button href="/" color="primary">
+                <Button href="/" color="indigo">
                   Logout
                 </Button>
               </CardBody>

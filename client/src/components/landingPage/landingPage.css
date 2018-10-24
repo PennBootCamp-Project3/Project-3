@@ -1,36 +1,48 @@
-#classicformpage .view {
-    background-image: url('https://images.unsplash.com/photo-1537724326059-2ea20251b9c8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6fe31f8b03bd0c4e001d8c7df09b6155&auto=format&fit=crop&w=1055&q=80');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    height: 100vh;
-    background-blend-mode: lighten;
-  }
-  
-  #classicformpage .gradient {
-    background: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%);
-    background: linear-gradient(to 45deg, rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%);
-  }
-  
-  #classicformpage .card {
-    background-color: rgba(126, 123, 215, 0.2);
-  }
-  
-  #classicformpage h6 {
-    line-height: 1.7;
-  }
-  
-  .top-nav-collapse {
+#formPage .view {
+  background-image: url("https://images.unsplash.com/photo-1537724326059-2ea20251b9c8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6fe31f8b03bd0c4e001d8c7df09b6155&auto=format&fit=crop&w=1055&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  background-blend-mode: lighten;
+  min-height: calc(100% - 0);
+}
+
+#formPage .gradient {
+  background: -webkit-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.7),
+    rgba(72, 15, 144, 0.4) 100%
+  );
+  background: linear-gradient(
+    to 45deg,
+    rgba(0, 0, 0, 0.7),
+    rgba(72, 15, 144, 0.4) 100%
+  );
+}
+
+#formPage .card {
+  background-color: rgba(126, 123, 215, 0.2);
+}
+
+#formPage h1 {
+  font-size: 50px;
+}
+
+#formPage h6 {
+  line-height: 1.7;
+}
+
+.top-nav-collapse {
+  background: #424f95 !important;
+}
+
+@media (max-width: 768px) {
+  #formPage .navbar:not(.top-nav-collapse) {
     background: #424f95 !important;
   }
-  
-  @media (max-width: 768px) {
-    #classicformpage .navbar:not(.top-nav-collapse) {
-        background: #424f95 !important;
-    }
-  }
-  
-  #classicformpage label {
-    color: #fff!important;
-  }
+}
 
+#formPage label {
+  color: #fff !important;
+}
