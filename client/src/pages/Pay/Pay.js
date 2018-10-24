@@ -31,17 +31,7 @@ constructor(props) {
     // console.log(this.props);
       API.runAuth(this.state.request)
       .then(result => {
-<<<<<<< HEAD
           this.setState({response:result.data });
-=======
-          console.log(result.data);
-          console.log(this.state);
-          // this.setState({
-          //   state = result.data
-          // })
-          // console.log(props);
-          // this.setState({update: result.data});
->>>>>>> 6d4e790f1a3dcaa048962f6c05781bf886f5d7a9
       })
       .then(
           console.log(this.state)
@@ -59,13 +49,8 @@ constructor(props) {
         <br />
         <div class="container">
           <PayForm 
-<<<<<<< HEAD
             formData={this.state.request}
             onSubmit={this.handleFormSubmit.bind(this)} 
-=======
-            formData={this.state}
-            onSubmit={this.handleFormSubmit} 
->>>>>>> 6d4e790f1a3dcaa048962f6c05781bf886f5d7a9
             onChange={this.handleChange}
             populate={this.state.response}
           />
