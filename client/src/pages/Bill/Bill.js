@@ -13,7 +13,7 @@ class Bill extends Component {
           <BillForm />
         </div>
         <div>
-        <FooterPage />
+          <FooterPage />
         </div>
       </React.Fragment>
     );

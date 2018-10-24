@@ -70,7 +70,6 @@ class Pay extends Component {
             </CardBody>
           </Card>
         </div>
-
         <div>
           <FooterPage />
         </div>

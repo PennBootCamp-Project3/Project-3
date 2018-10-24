@@ -11,13 +11,7 @@ class ReportForm extends Component {
           <strong>Reports</strong>
         </h5>
         <hr />
-        <ReactTable
-          data={this.props.resp}
-          columns={this.props.cols}
-          // resolveData={data => data.map(row => row)}
-          // data={this.state}
-          // columns={}
-        />
+        <ReactTable data={this.props.resp} columns={this.props.cols} />
       </div>
     );
   }
