@@ -22,8 +22,8 @@ export default class LandingPage extends Component {
             <Container>
               <Row>
                 <div className="white-text text-center col-md-12">
-                <br />
-                <br />
+                  <br />
+                  <br />
                   <h1 className="h1-responsive font-weight-bold">ReactPay </h1>
                   <hr className="hr-light" />
                   <h6 className="mb-4">
@@ -64,7 +64,6 @@ export default class LandingPage extends Component {
                     </CardBody>
                   </Card>
                   <br />
-                  
                 </Col>
                 <Col md={6}>
                   <Card id="classic-card">
