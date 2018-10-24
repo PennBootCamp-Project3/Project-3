@@ -63,8 +63,8 @@ export default class HomeForm extends Component {
               <CardBody>
                 <CardTitle tag="h5">Setup Your Account</CardTitle>
                 <CardText>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  Obtain your new account credentials by entering
+                  a few key pieces of information. 
                 </CardText>
                 <Button href="/pay/" color="indigo">
                   Go
@@ -85,8 +85,8 @@ export default class HomeForm extends Component {
               <CardBody>
                 <CardTitle tag="h5">Choose Your Frequency</CardTitle>
                 <CardText>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  Visualize each of your company's bill plans and  
+                  determine how often you wish to pay.
                 </CardText>
                 <Button href="/bill/" color="indigo">
                   Go
@@ -107,8 +107,8 @@ export default class HomeForm extends Component {
               <CardBody>
                 <CardTitle tag="h5">View Your Reports</CardTitle>
                 <CardText>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  Here, your account is specified by ID and broken
+                  down into easy-to-read sections. 
                 </CardText>
                 <Button href="/report/" color="indigo">
                   Go
@@ -128,8 +128,8 @@ export default class HomeForm extends Component {
               <CardBody>
                 <CardTitle tag="h5">Set Your Configuration</CardTitle>
                 <CardText>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  You can enter the specific site name for your business
+                  and obtain your merchant ID. 
                 </CardText>
                 <Button href="/config/" color="indigo">
                   Go
@@ -150,8 +150,8 @@ export default class HomeForm extends Component {
               <CardBody>
                 <CardTitle tag="h5">Logout of Your Account</CardTitle>
                 <CardText>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  We'll see you next time! Thank you for using
+                  ReactPay. We hope you have a wonderful day. 
                 </CardText>
                 <Button href="/" color="indigo">
                   Logout
