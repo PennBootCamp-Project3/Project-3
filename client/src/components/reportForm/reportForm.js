@@ -1,36 +1,23 @@
 import React, { Component } from "react";
 import { Table } from "reactstrap";
+import ReactTable from "react-table";
 import API from "../../utils/API";
 
-class Report extends Component {
-
-renderTable = () => {
-  API
-}
-
+class ReportForm extends Component {
   render() {
     return (
       <div>
-        <br />
-        <br />
-        <h5><strong>Transactions</strong></h5>
-        <hr />
-        <Table hover>
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Username</th>
-          </tr>
-        </thead>
-        <tbody>
-          {rows}
-        </tbody>
-      </Table>
+      <ReactTable
+        data={this.props.resp}
+        columns={this.props.cols}
+        // resolveData={data => data.map(row => row)}
+        // data={this.state}
+        // columns={}
+      />
+      
       </div>
     );
   }
 }
 
-export default Report;
+export default ReportForm;
