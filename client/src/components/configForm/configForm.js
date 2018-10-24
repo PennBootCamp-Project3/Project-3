@@ -11,7 +11,7 @@ import {
   export default class ConfigForm extends Component {
     render() {
       return (
-        <div>
+        <div className="container-fluid">
           <br />
           <br />
           <h5><strong>Configuration</strong></h5>

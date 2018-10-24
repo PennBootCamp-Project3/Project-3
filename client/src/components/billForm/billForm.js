@@ -13,7 +13,7 @@ import {
 export default class BillForm extends Component {
   render() {
     return (
-      <div>
+      <div className="container-fluid">
         <br />
         <br />
         <h5><strong>Bill Pay Information</strong></h5>
