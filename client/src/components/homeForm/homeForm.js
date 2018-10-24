@@ -66,7 +66,7 @@ export default class HomeForm extends Component {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </CardText>
-                <Button href="/pay/" color="primary">
+                <Button href="/pay/" color="indigo">
                   Go
                 </Button>
               </CardBody>
@@ -88,7 +88,7 @@ export default class HomeForm extends Component {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </CardText>
-                <Button href="/bill/" color="primary">
+                <Button href="/bill/" color="indigo">
                   Go
                 </Button>
               </CardBody>
@@ -110,7 +110,7 @@ export default class HomeForm extends Component {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </CardText>
-                <Button href="/report/" color="primary">
+                <Button href="/report/" color="indigo">
                   Go
                 </Button>
               </CardBody>
@@ -131,7 +131,7 @@ export default class HomeForm extends Component {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </CardText>
-                <Button href="/config/" color="primary">
+                <Button href="/config/" color="indigo">
                   Go
                 </Button>
               </CardBody>
@@ -153,7 +153,7 @@ export default class HomeForm extends Component {
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </CardText>
-                <Button href="/" color="primary">
+                <Button href="/" color="indigo">
                   Logout
                 </Button>
               </CardBody>

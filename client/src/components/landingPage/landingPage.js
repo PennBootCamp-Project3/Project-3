@@ -18,10 +18,12 @@ export default class LandingPage extends Component {
     return (
       <div id="formPage">
         <View>
-          <Mask className="d-flex justify-content-center align-items-center gradient">
+          <Mask className="justify-content-center align-items-center gradient">
             <Container>
               <Row>
                 <div className="white-text text-center col-md-12">
+                <br />
+                <br />
                   <h1 className="h1-responsive font-weight-bold">ReactPay </h1>
                   <hr className="hr-light" />
                   <h6 className="mb-4">
@@ -31,7 +33,7 @@ export default class LandingPage extends Component {
                 </div>
               </Row>
               <Row>
-                <Col md="6">
+                <Col md={6}>
                   <Card id="classic-card">
                     <CardBody className="z-depth-2 white-text">
                       <h3 className="text-center">
@@ -62,9 +64,9 @@ export default class LandingPage extends Component {
                     </CardBody>
                   </Card>
                   <br />
-                  <br />
+                  
                 </Col>
-                <Col md="6">
+                <Col md={6}>
                   <Card id="classic-card">
                     <CardBody className="z-depth-2 white-text">
                       <h3 className="text-center">
