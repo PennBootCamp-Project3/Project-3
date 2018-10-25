@@ -11,7 +11,15 @@ class ReportForm extends Component {
           <strong>Reports</strong>
         </h5>
         <hr />
-        <ReactTable data={this.props.resp} columns={this.props.cols} />
+        <ReactTable 
+          data={this.props.resp} 
+          columns={this.props.cols} 
+          defaultSorted={[
+            {desc: true}
+          ]}
+          defaultPageSize={10}
+          className="-striped -highlight"
+        />
       </div>
     );
   }

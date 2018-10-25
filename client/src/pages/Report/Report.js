@@ -13,11 +13,13 @@ class Report extends Component {
       columns: [
       {
         Header: 'RespText',
-        accessor: 'resptext'
+        accessor: 'resptext',
+        width: 170
       },
       {
         Header: 'Token',
-        accessor: 'token'
+        accessor: 'token',
+        width: 170
       },
       {
         Header: 'Amount',
@@ -25,7 +27,8 @@ class Report extends Component {
       },
       {
         Header: 'RetRef',
-        accessor: 'retref'
+        accessor: 'retref',
+        width: 170
       },
       {
         Header: 'Processor',
@@ -52,7 +55,8 @@ class Report extends Component {
       },
       {
         Header: 'MerchId',
-        accessor: 'merchid'
+        accessor: 'merchid',
+        width: 170
       }, 
       {
         Header: 'BatchID',
@@ -60,7 +64,8 @@ class Report extends Component {
       },
       {
         Header: 'GUID',
-        accessor: '_id'
+        accessor: '_id',
+        width: 235
       },
       {
         Header: 'CommCard',
@@ -68,7 +73,8 @@ class Report extends Component {
       },
       {
         Header: 'EntryMode',
-        accessor: 'entrymode'
+        accessor: 'entrymode',
+        width: 125
       },
       {
         Header: 'BinType',
@@ -76,7 +82,8 @@ class Report extends Component {
       },
       {
         Header: 'Account',
-        accessor: 'account'
+        accessor: 'account',
+        width: 170
       }],
       data: []
     };
