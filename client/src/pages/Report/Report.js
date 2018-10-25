@@ -10,52 +10,71 @@ class Report extends Component {
     super(props);
     this.state = {
       //store data here
-      columns: [{
-        Header: 'DB_id',
-        accessor: '_id'
-      },{
-        Header: 'Amount',
-        accessor: 'amount'
-      },{
+      columns: [
+      {
         Header: 'RespText',
         accessor: 'resptext'
-      },{
-        Header: 'CommCard',
-        accessor: 'commcard'
-      },{
+      },
+      {
+        Header: 'Token',
+        accessor: 'token'
+      },
+      {
+        Header: 'Amount',
+        accessor: 'amount'
+      },
+      {
+        Header: 'RetRef',
+        accessor: 'retref'
+      },
+      {
+        Header: 'Processor',
+        accessor: 'respproc'
+      },
+      {
+        Header: 'RespCode',
+        accessor: 'respcode'
+      },
+      {
+        Header: 'RespStat',
+        accessor: 'respstat'
+      },
+      {
         Header: 'CvvResp',
         accessor:'cvvresp'
       },{
         Header: 'AvsResp',
         accessor: 'avsresp'
-      },{
-        Header: 'RespCode',
-        accessor: 'respcode'
-      },{
-        Header: 'EntryMode',
-        accessor: 'entrymode'
-      },{
-        Header: 'MerchId',
-        accessor: 'merchid'
-      },{
-        Header: 'Token',
-        accessor: 'token'
-      },{
+      },
+      {
         Header: 'AuthCode',
         accessor: 'authcode'
-      },{
-        Header: 'Processor',
-        accessor: 'respproc'
-      },{
+      },
+      {
+        Header: 'MerchId',
+        accessor: 'merchid'
+      }, 
+      {
+        Header: 'BatchID',
+        accessor: 'batchid'
+      },
+      {
+        Header: 'GUID',
+        accessor: '_id'
+      },
+      {
+        Header: 'CommCard',
+        accessor: 'commcard'
+      },
+      {
+        Header: 'EntryMode',
+        accessor: 'entrymode'
+      },
+      {
         Header: 'BinType',
         accessor: 'bintype'
-      },{
-        Header: 'RetRef',
-        accessor: 'retref'
-      },{
-        Header: 'RespStat',
-        accessor: 'respstat'
-      },{
+      },
+      {
         Header: 'Account',
         accessor: 'account'
       }],
