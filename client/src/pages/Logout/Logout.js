@@ -3,9 +3,7 @@ import Heading from "../../components/Nav/Nav";
 
 class Logout extends Component {
   render() {
-    return (
-        <Heading />
-    );
+    return <Heading />;
   }
 }
 

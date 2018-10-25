@@ -7,12 +7,8 @@ import {
   FormGroup,
   Label,
   Input,
-  CustomInput,
-  Card,
-  CardBody,
-  CardTitle
+  CustomInput
 } from "reactstrap";
-import CardText from "../../components/cardtext";
 // import API from "../../utils/API";
 
 export default class PayForm extends Component {
@@ -40,19 +36,8 @@ export default class PayForm extends Component {
                   placeholder=""
                 />
               </FormGroup>
-              </Col>
-            {/* <Col md={6}>
-              <Card>
-                <CardBody>
-                  <CardTitle>Submit Order Results</CardTitle>
-                  <CardText 
-                    cardText={JSON.stringify(this.props.populate)} 
-                  />
-                </CardBody>
-              </Card>
-            </Col> */}
-          </Row>
-          <Row form>
+            </Col>
+
             <Col md={6}>
               <FormGroup>
                 <Label for="billingAddress">Billing Address</Label>
@@ -81,8 +66,7 @@ export default class PayForm extends Component {
                 />
               </FormGroup>
             </Col>
-          </Row>
-          <Row form>
+
             <Col md={3}>
               <FormGroup>
                 <Label for="city">City</Label>
@@ -195,7 +179,7 @@ export default class PayForm extends Component {
                   <option values="American Express">American Express</option>
                   <option values="Discover">Discover</option>
                 </Input>
-              </FormGroup> 
+              </FormGroup>
             </Col>
             <Col md={6}>
               <FormGroup>
@@ -252,30 +236,6 @@ export default class PayForm extends Component {
               </FormGroup>
             </Col>
           </Row>
-          {/* <Col md={4}>
-              <FormGroup>
-                <Label for="month">Expiration Month</Label>
-                <Input 
-                  type="select" 
-                  name="selectMonth" 
-                  id="selectMonth"
-                  value={this.props.formData.month}
-                  onChange={this.props.onChange}>
-                  <option value="Jan">January</option>
-                  <option value="Feb">February</option>
-                  <option value="Mar">March</option>
-                  <option value="Apr">April</option>
-                  <option value="May">May</option>
-                  <option value="Jun">June</option>
-                  <option value="Jul">July</option>
-                  <option value="Aug">August</option>
-                  <option value="Sep">September</option>
-                  <option value="Oct">October</option>
-                  <option value="Nov">November</option>
-                  <option value="Dec">December</option>
-                </Input>
-              </FormGroup>
-            </Col> */}
         </Form>
         <br />
         <h5>
@@ -312,12 +272,7 @@ export default class PayForm extends Component {
               </FormGroup>
             </Col>
           </Row>
-          <Button
-            onClick={this.props.onSubmit}
-            color="indigo"
-            type="submit"
-            // value="Submit"
-          >
+          <Button onClick={this.props.onSubmit} color="indigo" type="submit">
             Submit Order
           </Button>
         </Form>

@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import Heading from "../../components/Nav/Nav";
 import ConfigForm from "../../components/configForm";
 import FooterTwo from "../../components/footerTwo";
