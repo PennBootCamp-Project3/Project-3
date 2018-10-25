@@ -19,6 +19,9 @@ class ReportForm extends Component {
           ]}
           defaultPageSize={10}
           className="-striped -highlight"
+          filterable
+          defaultFilterMethod={(filter, row) =>
+            String(row[filter.id]) === filter.value}
         />
       </div>
     );

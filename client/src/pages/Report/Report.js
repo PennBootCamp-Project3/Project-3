@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Heading from "../../components/Nav/Nav";
 import ReportForm from "../../components/reportForm";
 import FooterPage from "../../components/footer";
+import matchSorter from 'match-sorter';
 import API from "../../utils/API";
 
 
@@ -9,6 +10,7 @@ class Report extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      
       //store data here
       columns: [
       {
@@ -28,7 +30,10 @@ class Report extends Component {
       {
         Header: 'RetRef',
         accessor: 'retref',
-        width: 170
+        width: 170,
+        filterMethod: (filter, rows) =>
+          matchSorter(rows, filter.value, { keys: ["retref"] }),
+          filterAll: true
       },
       {
         Header: 'Processor',
@@ -117,6 +122,7 @@ componentDidMount() {
           <ReportForm 
             resp={this.state.data}
             cols={this.state.columns}
+            
           />
         </div>
         <div>
